@@ -2,22 +2,51 @@ project:
   type: book
 
 book:
-  title: "Bayes-fun-Harrie"
-  author: "Norah Jones"
+  title: "Bayesian Statistics the Fun Way. Een notitieboek"
+  author: "Peter Baumgartner, bewerkt Harrie Jonkman"
   date: "6/18/2024"
+  
+  
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+   
+    - part: "PART I: Introduction to Probability"
+    - 00-intro.qmd
+    - 01-everyday-reasoning.qmd
+    - 02-measuring-uncertainty.qmd
+    - 03-logic-uncertainty.qmd
+    - 04-binomial-distribution.qmd
+    - 05-beta-distribution.qmd
 
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
+    css:
+     - quarto.css
+     - glossary.css
+    number-sections: true
+    toc-depth: 5
+    toc-expand: 2
+    code-fold: false
+    code-tools: true
+    code-link: true
+    code-overflow: scroll
+    df-print: default
+    fig-cap-location: top
 
+editor: source
+
+language:
+   crossref-prp-title: "Callout"
+   crossref-cnj-title: "Experiment"
+   crossref-lem-title: "Solution"
+   
+callout-tip-title: "Resource"         # green
+callout-note-title: "Note"            # blue
+callout-warning-title: "Wach out!"    # orange
+callout-important-title: "Important"  # red
+callout-caution-title: "TODO"         # yellow
 
 
