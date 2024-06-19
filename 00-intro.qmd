@@ -1,9 +1,11 @@
-# Introduction
+---
+engine: knitr
+---
 
-This is a book created from markdown and executable code.
+# Introduction {.unnumbered}
 
-See @knuth84 for additional discussion of literate programming.
-
-```{r}
-1 + 1
-```
+Frequentist statistics (GLOSSARY) is founded on the idea that
+probability represents the frequency with which something happens.
+Bayesian statistics (GLOSSARY), on the other hand, is concerned
+with how probabilities represent how uncertain we are about a piece of
+information.

@@ -156,37 +156,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01-everyday-reasoning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bayesian Thinking and Everyday Reasoning</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-measuring-uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03-logic-uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Logic of Uncertainty</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04-binomial-distribution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating a Binomial Probability Distribution</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-beta-distribution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Beta Distribution</span></span></a>
   </div>
 </li>
     </ul>
@@ -199,7 +199,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <ul>
+  <li><a href="#sec-book-motivation" id="toc-sec-book-motivation" class="nav-link" data-scroll-target="#sec-book-motivation">About My Motivation for this Quarto Book</a></li>
+  <li><a href="#content-and-goals-of-this-book" id="toc-content-and-goals-of-this-book" class="nav-link" data-scroll-target="#content-and-goals-of-this-book">Content and Goals of this Book</a>
+  <ul>
+  <li><a href="#short-summaries-of-the-book-content" id="toc-short-summaries-of-the-book-content" class="nav-link" data-scroll-target="#short-summaries-of-the-book-content">Short summaries of the book content</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#experiments" id="toc-experiments" class="nav-link" data-scroll-target="#experiments">Experiments</a></li>
+  </ul></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
+  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session Info</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -239,18 +250,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
-<p>This is a Quarto book.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="callout callout-style-default callout-note callout-titled" style="color: blue;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This is work in progress: about 95%.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>This Quarto book collects my personal notes, trials and exercises of the <a href="https://nostarch.com/learnbayes">Bayesian Statistics the Fun Way: Understanding Statistics and Probability With Star Wars, LEGO, and Rubber Ducks</a> by Will Kurt <span class="citation" data-cites="kurt2019">(<a href="#ref-kurt2019" role="doc-biblioref"><strong>kurt2019?</strong></a>)</span>.</p>
+<section id="sec-book-motivation" class="level2">
+<h2 class="anchored" data-anchor-id="sec-book-motivation">About My Motivation for this Quarto Book</h2>
+<p>I am not an expert in statistics. During my study in sociology back in 1970er I had only rudimentary learned about frequentist statistics (GLOSSARY). There weren’t computer only via time-sharing and keypunching for card-to-tape converter available. This was painstaking and not motivating because it had not much practical values. 10 years later I worked sometimes with SPSS but used — as many of my colleagues — the “statistics all” option without much understanding. It was no fun and so I dedicated most of my time to theoretical work and later sometimes to qualitative social research via <a href="https://en.wikipedia.org/wiki/Grounded_theory">grounded theory</a>.</p>
+<p>Only when I heard 2015 about R and began to exerpiment with it, I started my self-directed education in statistics again. Still I was not so intrigued by Null Hypothesis Statistical Testing (NHST) but more from Data Science. I noticed the problems with p-values and was therefore fascinated with <a href="https://thenewstatistics.com/itns/">Introduction to the New Statistics</a> by Geoff Cumming &amp; Robert Calin-Jageman <span class="citation" data-cites="cumming2017">(<a href="#ref-cumming2017" role="doc-biblioref"><strong>cumming2017?</strong></a>)</span>. Instead of concentrating on p-values the book teaches the importance of confidence interval,confidence intervals (GLOSSARY), (CIs). But at that time I came across some discussion about Bayesian statistics (GLOSSARY. I read <a href="https://www.jstor.org/stable/j.ctt1np76s">The Theory That Would Not Die</a>: How Bayes’ Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant From Two Centuries of Controversy by Sharon Bertsch McGrayne <span class="citation" data-cites="mcgrayne2011">(<a href="#ref-mcgrayne2011" role="doc-biblioref"><strong>mcgrayne2011?</strong></a>)</span> but didn’t understand at that time how Bayesian statistics works.</p>
+<p>The real game changer for me then was <a href="https://www.routledge.com/Statistical-Rethinking-A-Bayesian-Course-with-Examples-in-R-and-STAN/McElreath/p/book/9780367139919">Statistical Rethinking</a> by Richard McElreath <span class="citation" data-cites="mcelreath2020">(<a href="#ref-mcelreath2020" role="doc-biblioref"><strong>mcelreath2020?</strong></a>)</span>. I immediately started <a href="https://bookdown.org/pbaumgartner/sr2-notes/">my first Quarto book</a> with notes about the book and the companion bookdown website <a href="https://bookdown.org/content/4857/"><em>Statistical rethinking</em> with brms, ggplot2, and the tidyverse: Second edition</a> by A Solomon Kurz. But unfortunately after four chapters I noticed that I am lacking basic knowledge and looked around for other books on Bayesian statistics that are easier to digest for me. I tried A Student’s Guide to Bayesian Statistics by Ben Lambert <span class="citation" data-cites="lambert2018">(<a href="#ref-lambert2018" role="doc-biblioref"><strong>lambert2018?</strong></a>)</span>, but I stopped reading it after chapter eight. I has to much theory for me and I was missing the opportunity trying my own hands out with R.</p>
+<p>So finally I came around to Will Kurt’s book. I understand that the modern simulation methods like MCMC are not in the focus of the book and also the usage of R code is distributed very sparsely in the book. But I learned (and understood) many Bayesian concepts and could all the graphics in the book — where the R code is missing — replicate with {<strong>ggplot2</strong>} <span class="citation" data-cites="ggplot2">(<a href="#ref-ggplot2" role="doc-biblioref"><strong>ggplot2?</strong></a>)</span> in tidyverse <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref"><strong>tidyverse?</strong></a>)</span> style. The book was at the time (September/October 2023) a perfect match for my rudimentary knowledge. I have now more trust to continue with Statistical Rethinking or — as a possible alternative — to start with a new Quarto book on <a href="https://sites.google.com/site/doingbayesiandataanalysis/">Doing Bayesian Data Analysis: A Tutorial With R, JAGS, and Stan</a> <span class="citation" data-cites="kruschke2014">(<a href="#ref-kruschke2014" role="doc-biblioref"><strong>kruschke2014?</strong></a>)</span> which I have already read and (I believe) mostly understood.</p>
+<p>Another motivation to write a Quarto book was to learn how to use <a href="https://quarto.org/">Quarto</a>. I already wrote some books with bookdown <span class="citation" data-cites="bookdown">(<a href="#ref-bookdown" role="doc-biblioref"><strong>bookdown?</strong></a>)</span> but Quarto was relatively new for me. This book was therefore a good occasion to learn and experiment with the functionality of Quarto.</p>
+</section>
+<section id="content-and-goals-of-this-book" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="content-and-goals-of-this-book">Content and Goals of this Book</h2>
+<p>This book collects personal notes during reading of <a href="https://nostarch.com/learnbayes">Bayesian Statistics the Fun Way</a> by Will Kurt. Additionally I am using <a href="https://nostarch.com/download/resources/Bayes_exercise_solutions_new.pdf">C: Answers to Exercises</a></p>
+<p>Each chapter of the book has three main parts:</p>
+<section id="short-summaries-of-the-book-content" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="short-summaries-of-the-book-content">Short summaries of the book content</h3>
+<p>This summarizes my own highlights but gives also the necessary information for my section about “Experiments”. Mostly I quote the text but without page references. Often I made minor editing (e.g., shorting the text) or put sometimes the content in my own wording. As I follow the text section by section reader can easily find the quoted passage.</p>
+<p>Almost all of my text of this first part of the Quarto book are not mine, but is coming from the resources mentioned above. There are two exceptions:</p>
+<ul>
+<li>Whenever necessary I include personal notes already in this part of the chapter. Most of the time it is combined with a cross reference to the third main part of the book: my experiments.</li>
+<li>Sometimes there is also base R Code by the author provided. Whenever possible I convert this base R code by the author in {<strong>tidyverse</strong>} code.</li>
+<li>I copied all figures into the text as a template for my own replication.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Although I have quoted many passages from the original as highlights for me to remember, this Quarto ebook is not meant to stand alone. My summaries are driven by my personal interests and my huge gaps in my statistical knowledge and especially in Bayesian statistics. My notes are therefore in no way a substitute for Will Kurt’s book <a href="https://nostarch.com/learnbayes">Bayesian Statistics the Fun Way: Understanding Statistics and Probability With Star Wars, LEGO, and Rubber Ducks</a> by Will Kurt <span class="citation" data-cites="kurt2019">(<a href="#ref-kurt2019" role="doc-biblioref"><strong>kurt2019?</strong></a>)</span>. Please buy the book so that you can embed my notes appropriately in the general argumentation of the author.</p>
+</div>
+</div>
+</section>
+<section id="exercises" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercises">Exercises</h3>
+<p>Again I quote the full question text and then try my own solution. If my solution is not correct or I cant find a solution I will note this in a personal callout and will correct the solution. If my solution is correct but with a different method I will also reflect on the result, but will not adapt or change my solution.</p>
+</section>
+<section id="experiments" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="experiments">Experiments</h3>
+<p>Here I am trying to make my own exercises. Most of the examples are replications of the book figures because the author has not included the R code. Additionally I cross referenced to the figure from the first part, the author section. If you hover over the cross reference link you will get the authors figure overlaid and can compare it with my replication.</p>
+<p>Writing my own R chunks I am using the tidy approach with the collection of the {<strong>tidyverse</strong>} packages, especially with {<strong>ggplot2</strong>} for the figures. But instead of using the <code>library()</code> command I always mention the used packages explicitly. Whenever I used another packages I called the function with the package name in front with the syntax <code>&lt;package name&gt;::&lt;function name&gt;()</code>, like <code>ggplot2::gplot()</code>. This is tedious work but it helps me to learn &amp; remember which command “belongs” to which package. Only exception is the {<strong>patchwork</strong>} package, as I do not know how to call commands like <code>p1 + p2</code> with the package name.</p>
+<p>In graphics I use not only caption for figures but also captions for the R code. There is no easy standardized way to use code listings with captions and to evaluate the code at the same time, but I <a href="https://github.com/quarto-dev/quarto-cli/issues/1580#issuecomment-1552673825">found a workaround</a> with the following structure of code options in the code chunk:</p>
+<pre><code>#| label: fig-name
+#| fig-cap: "fig-title"
+#| attr-source: '#lst-fig-name lst-cap="list-title"'</code></pre>
+<p>This code generates a warning because at the moment the <code>=</code> symbol is not allowed in RStudio when running a R chunks interactively in a Quarto document. <a href="https://github.com/rstudio/rstudio/issues/13326">See issue 13326</a>. Although I got a warning the code does what I want: It gives the figure and the code listing a heading and evaluates the code at the same time.</p>
+</section>
+</section>
+<section id="glossary" class="level2">
+<h2 class="anchored" data-anchor-id="glossary">Glossary</h2>
+<p>I started a glossary using the {<a href="https://cran.r-project.org/web/packages/glossary/index.html"><strong>glossary</strong></a>} package by Lisa DeBruine <span class="citation" data-cites="glossary">(<a href="#ref-glossary" role="doc-biblioref"><strong>glossary?</strong></a>)</span>. A glossary entry is visualized with a double underline. Every chapter has a section where the text of all glossary entries of the chapter are displayed. When you hover with the mouse over the link it opens a pop-up window with the glossary text. You can see example in the section about my motivation for this ebook (See <a href="#sec-book-motivation" class="quarto-xref"><span>About My Motivation for this Quarto Book</span></a>).</p>
+<p>I am using this glossary for all my other Quarto books but it is till work in progress. Please keep in mind that I collected the definition at various places and be attentive because there is no guarantee that the entry is appropriate and correct. I have added the sources where I got the content for the glossary entry.</p>
+</section>
+<section id="session-info" class="level2">
+<h2 class="anchored" data-anchor-id="session-info">Session Info</h2>
+<p>Every chapter ends with a session information printed with the <code>sessionInfo()</code> function.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I wrote this book as a text for others to read because that forces me to be become explicit and explain all my learning outcomes more carefully. Please keep in mind that this text is not written by an expert but by a learner. In spite of replicating most of the content it may contain many mistakes. All these misapprehensions and errors are my responsibility.</p>
+<p>In any case I am the only responsible person for this text, especially if I have used code from the resources wrongly or misunderstood a quoted text passage.</p>
 </div>
 </div>
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -719,20 +809,212 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./00-intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preface {.unnumbered}</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>This is a Quarto book.</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>To learn more about Quarto books visit <span class="ot">&lt;https://quarto.org/docs/books&gt;</span>.</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">engine:</span><span class="co"> knitr</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preface {.unnumbered}</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>::: {.callout-note style="color: blue;"}</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">#### This is work in progress: about 95%.</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>This Quarto book collects my personal notes, trials and exercises of the</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>[Bayesian Statistics the Fun Way: Understanding Statistics and</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Probability With Star Wars, LEGO, and Rubber</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>Ducks](https://nostarch.com/learnbayes) by Will Kurt <span class="co">[</span><span class="ot">@kurt2019</span><span class="co">]</span>.</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## About My Motivation for this Quarto Book {#sec-book-motivation}</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>I am not an expert in statistics. During my study in sociology back in</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>1970er I had only rudimentary learned about</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>frequentist statistics (GLOSSARY). There weren't computer only via</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>time-sharing and keypunching for card-to-tape converter available. This</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>was painstaking and not motivating because it had not much practical</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>values. 10 years later I worked sometimes with SPSS but used --- as many</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>of my colleagues --- the "statistics all" option without much</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>understanding. It was no fun and so I dedicated most of my time to</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>theoretical work and later sometimes to qualitative social research via</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">grounded theory</span><span class="co">](https://en.wikipedia.org/wiki/Grounded_theory)</span>.</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>Only when I heard 2015 about R and began to exerpiment with it, I</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>started my self-directed education in statistics again. Still I was not</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>so intrigued by Null Hypothesis Statistical Testing (NHST) but more from</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>Data Science. I noticed the problems with p-values and was therefore</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>fascinated with [Introduction to the New</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>Statistics](https://thenewstatistics.com/itns/) by Geoff Cumming &amp;</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>Robert Calin-Jageman <span class="co">[</span><span class="ot">@cumming2017</span><span class="co">]</span>. Instead of concentrating on</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>p-values the book teaches the importance of</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>confidence interval,confidence intervals (GLOSSARY), (CIs). But</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>at that time I came across some discussion about</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>Bayesian statistics (GLOSSARY. I read [The Theory That Would Not</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>Die](https://www.jstor.org/stable/j.ctt1np76s): How Bayes' Rule Cracked</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>From Two Centuries of Controversy by Sharon Bertsch McGrayne</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@mcgrayne2011</span><span class="co">]</span> but didn't understand at that time how Bayesian</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>statistics works.</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>The real game changer for me then was [Statistical</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>Rethinking](https://www.routledge.com/Statistical-Rethinking-A-Bayesian-Course-with-Examples-in-R-and-STAN/McElreath/p/book/9780367139919)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>by Richard McElreath <span class="co">[</span><span class="ot">@mcelreath2020</span><span class="co">]</span>. I immediately started [my first</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>Quarto book](https://bookdown.org/pbaumgartner/sr2-notes/) with notes</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>about the book and the companion bookdown website [*Statistical</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>rethinking* with brms, ggplot2, and the tidyverse: Second</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>edition](https://bookdown.org/content/4857/) by A Solomon Kurz. But</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>unfortunately after four chapters I noticed that I am lacking basic</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>knowledge and looked around for other books on Bayesian statistics that</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>are easier to digest for me. I tried A Student's Guide to Bayesian</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>Statistics by Ben Lambert <span class="co">[</span><span class="ot">@lambert2018</span><span class="co">]</span>, but I stopped reading it after</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>chapter eight. I has to much theory for me and I was missing the</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>opportunity trying my own hands out with R.</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>So finally I came around to Will Kurt's book. I understand that the</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>modern simulation methods like MCMC are not in the focus of the book and</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>also the usage of R code is distributed very sparsely in the book. But I</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>learned (and understood) many Bayesian concepts and could all the</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>graphics in the book --- where the R code is missing --- replicate with</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>{**ggplot2**} <span class="co">[</span><span class="ot">@ggplot2</span><span class="co">]</span> in tidyverse <span class="co">[</span><span class="ot">@tidyverse</span><span class="co">]</span> style. The book was</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>at the time (September/October 2023) a perfect match for my rudimentary</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>knowledge. I have now more trust to continue with Statistical Rethinking</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>or --- as a possible alternative --- to start with a new Quarto book on</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>[Doing Bayesian Data Analysis: A Tutorial With R, JAGS, and</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>Stan](https://sites.google.com/site/doingbayesiandataanalysis/)</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@kruschke2014</span><span class="co">]</span> which I have already read and (I believe) mostly</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>understood.</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>Another motivation to write a Quarto book was to learn how to use</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span>. I already wrote some books with bookdown</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@bookdown</span><span class="co">]</span> but Quarto was relatively new for me. This book was</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>therefore a good occasion to learn and experiment with the functionality</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>of Quarto.</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## Content and Goals of this Book {.unnumbered}</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>This book collects personal notes during reading of [Bayesian Statistics</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>the Fun Way](https://nostarch.com/learnbayes) by Will Kurt. Additionally</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>I am using [C: Answers to</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>Exercises](https://nostarch.com/download/resources/Bayes_exercise_solutions_new.pdf)</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>Each chapter of the book has three main parts:</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="fu">### Short summaries of the book content {.unnumbered}</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>This summarizes my own highlights but gives also the necessary</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>information for my section about "Experiments". Mostly I quote the text</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>but without page references. Often I made minor editing (e.g., shorting</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>the text) or put sometimes the content in my own wording. As I follow</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>the text section by section reader can easily find the quoted passage.</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>Almost all of my text of this first part of the Quarto book are not</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>mine, but is coming from the resources mentioned above. There are two</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>exceptions:</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Whenever necessary I include personal notes already in this part of</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>    the chapter. Most of the time it is combined with a cross reference</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>    to the third main part of the book: my experiments.</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Sometimes there is also base R Code by the author provided. Whenever</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>    possible I convert this base R code by the author in {**tidyverse**}</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>    code.</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>I copied all figures into the text as a template for my own</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>    replication.</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>Although I have quoted many passages from the original as highlights for</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>me to remember, this Quarto ebook is not meant to stand alone. My</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>summaries are driven by my personal interests and my huge gaps in my</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>statistical knowledge and especially in Bayesian statistics. My notes</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>are therefore in no way a substitute for Will Kurt's book [Bayesian</span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>Statistics the Fun Way: Understanding Statistics and Probability With</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>Star Wars, LEGO, and Rubber Ducks](https://nostarch.com/learnbayes) by</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>Will Kurt <span class="co">[</span><span class="ot">@kurt2019</span><span class="co">]</span>. Please buy the book so that you can embed my</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>notes appropriately in the general argumentation of the author.</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercises {.unnumbered}</span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>Again I quote the full question text and then try my own solution. If my</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>solution is not correct or I cant find a solution I will note this in a</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>personal callout and will correct the solution. If my solution is</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>correct but with a different method I will also reflect on the result,</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>but will not adapt or change my solution.</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="fu">### Experiments {.unnumbered}</span></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>Here I am trying to make my own exercises. Most of the examples are</span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>replications of the book figures because the author has not included the</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>R code. Additionally I cross referenced to the figure from the first</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>part, the author section. If you hover over the cross reference link you</span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>will get the authors figure overlaid and can compare it with my</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>replication.</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>Writing my own R chunks I am using the tidy approach with the collection</span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>of the {**tidyverse**} packages, especially with {**ggplot2**} for the</span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>figures. But instead of using the <span class="in">`library()`</span> command I always mention</span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>the used packages explicitly. Whenever I used another packages I called</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>the function with the package name in front with the syntax</span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;package name&gt;::&lt;function name&gt;()`</span>, like <span class="in">`ggplot2::gplot()`</span>. This is</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>tedious work but it helps me to learn &amp; remember which command "belongs"</span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>to which package. Only exception is the {**patchwork**} package, as I do</span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>not know how to call commands like <span class="in">`p1 + p2`</span> with the package name.</span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>In graphics I use not only caption for figures but also captions for the</span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>R code. There is no easy standardized way to use code listings with</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>captions and to evaluate the code at the same time, but I [found a</span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>workaround](https://github.com/quarto-dev/quarto-cli/issues/1580#issuecomment-1552673825)</span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>with the following structure of code options in the code chunk:</span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-name</span></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "fig-title"</span></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="in">#| attr-source: '#lst-fig-name lst-cap="list-title"'</span></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>This code generates a warning because at the moment the <span class="in">`=`</span> symbol is</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>not allowed in RStudio when running a R chunks interactively in a Quarto</span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>document. [See issue</span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>13326](https://github.com/rstudio/rstudio/issues/13326). Although I got</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>a warning the code does what I want: It gives the figure and the code</span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>listing a heading and evaluates the code at the same time.</span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>I started a glossary using the</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>{<span class="co">[</span><span class="ot">**glossary**</span><span class="co">](https://cran.r-project.org/web/packages/glossary/index.html)</span>}</span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>package by Lisa DeBruine <span class="co">[</span><span class="ot">@glossary</span><span class="co">]</span>. A glossary entry is visualized</span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>with a double underline. Every chapter has a section where the text of</span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>all glossary entries of the chapter are displayed. When you hover with</span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>the mouse over the link it opens a pop-up window with the glossary text.</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>You can see example in the section about my motivation for this ebook</span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>(See @sec-book-motivation).</span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>I am using this glossary for all my other Quarto books but it is till</span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>work in progress. Please keep in mind that I collected the definition at</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>various places and be attentive because there is no guarantee that the</span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>entry is appropriate and correct. I have added the sources where I got</span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>the content for the glossary entry.</span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session Info</span></span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>Every chapter ends with a session information printed with the</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="in">`sessionInfo()`</span> function.</span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a><span class="fu">###### Warning</span></span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>I wrote this book as a text for others to read because that forces me to</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>be become explicit and explain all my learning outcomes more carefully.</span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>Please keep in mind that this text is not written by an expert but by a</span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>learner. In spite of replicating most of the content it may contain many</span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>mistakes. All these misapprehensions and errors are my responsibility.</span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>In any case I am the only responsible person for this text, especially</span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>if I have used code from the resources wrongly or misunderstood a quoted</span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>text passage.</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
