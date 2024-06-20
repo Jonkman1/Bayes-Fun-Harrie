@@ -314,7 +314,7 @@
     "href": "index.html#content-and-goals-of-this-book",
     "title": "Bayesian Statistics the Fun Way. Een notitieboek",
     "section": "Content and Goals of this Book",
-    "text": "Content and Goals of this Book\nThis book collects personal notes during reading of Bayesian Statistics the Fun Way by Will Kurt. Additionally I am using C: Answers to Exercises\nEach chapter of the book has three main parts:\n\nShort summaries of the book content\nThis summarizes my own highlights but gives also the necessary information for my section about “Experiments”. Mostly I quote the text but without page references. Often I made minor editing (e.g., shorting the text) or put sometimes the content in my own wording. As I follow the text section by section reader can easily find the quoted passage.\nAlmost all of my text of this first part of the Quarto book are not mine, but is coming from the resources mentioned above. There are two exceptions:\n\nWhenever necessary I include personal notes already in this part of the chapter. Most of the time it is combined with a cross reference to the third main part of the book: my experiments.\nSometimes there is also base R Code by the author provided. Whenever possible I convert this base R code by the author in {tidyverse} code.\nI copied all figures into the text as a template for my own replication.\n\n\n\n\n\n\n\nImportant\n\n\n\nAlthough I have quoted many passages from the original as highlights for me to remember, this Quarto ebook is not meant to stand alone. My summaries are driven by my personal interests and my huge gaps in my statistical knowledge and especially in Bayesian statistics. My notes are therefore in no way a substitute for Will Kurt’s book Bayesian Statistics the Fun Way: Understanding Statistics and Probability With Star Wars, LEGO, and Rubber Ducks by Will Kurt (kurt2019?). Please buy the book so that you can embed my notes appropriately in the general argumentation of the author.\n\n\n\n\nExercises\nAgain I quote the full question text and then try my own solution. If my solution is not correct or I cant find a solution I will note this in a personal callout and will correct the solution. If my solution is correct but with a different method I will also reflect on the result, but will not adapt or change my solution.\n\n\nExperiments\nHere I am trying to make my own exercises. Most of the examples are replications of the book figures because the author has not included the R code. Additionally I cross referenced to the figure from the first part, the author section. If you hover over the cross reference link you will get the authors figure overlaid and can compare it with my replication.\nWriting my own R chunks I am using the tidy approach with the collection of the {tidyverse} packages, especially with {ggplot2} for the figures. But instead of using the library() command I always mention the used packages explicitly. Whenever I used another packages I called the function with the package name in front with the syntax &lt;package name&gt;::&lt;function name&gt;(), like ggplot2::gplot(). This is tedious work but it helps me to learn & remember which command “belongs” to which package. Only exception is the {patchwork} package, as I do not know how to call commands like p1 + p2 with the package name.\nIn graphics I use not only caption for figures but also captions for the R code. There is no easy standardized way to use code listings with captions and to evaluate the code at the same time, but I found a workaround with the following structure of code options in the code chunk:\n#| label: fig-name\n#| fig-cap: \"fig-title\"\n#| attr-source: '#lst-fig-name lst-cap=\"list-title\"'\nThis code generates a warning because at the moment the = symbol is not allowed in RStudio when running a R chunks interactively in a Quarto document. See issue 13326. Although I got a warning the code does what I want: It gives the figure and the code listing a heading and evaluates the code at the same time.",
+    "text": "Content and Goals of this Book\nThis book collects personal notes during reading of Bayesian Statistics the Fun Way by Will Kurt. Additionally I am using C: Answers to Exercises\nEach chapter of the book has three main parts:\nShort summaries of the book content\nThis summarizes my own highlights but gives also the necessary information for my section about “Experiments”. Mostly I quote the text but without page references. Often I made minor editing (e.g., shorting the text) or put sometimes the content in my own wording. As I follow the text section by section reader can easily find the quoted passage.\nAlmost all of my text of this first part of the Quarto book are not mine, but is coming from the resources mentioned above. There are two exceptions:\n\nWhenever necessary I include personal notes already in this part of the chapter. Most of the time it is combined with a cross reference to the third main part of the book: my experiments.\nSometimes there is also base R Code by the author provided. Whenever possible I convert this base R code by the author in {tidyverse} code.\nI copied all figures into the text as a template for my own replication.\n\n\n\n\n\n\n\nImportant\n\n\n\nAlthough I have quoted many passages from the original as highlights for me to remember, this Quarto ebook is not meant to stand alone. My summaries are driven by my personal interests and my huge gaps in my statistical knowledge and especially in Bayesian statistics. My notes are therefore in no way a substitute for Will Kurt’s book Bayesian Statistics the Fun Way: Understanding Statistics and Probability With Star Wars, LEGO, and Rubber Ducks by Will Kurt (kurt2019?). Please buy the book so that you can embed my notes appropriately in the general argumentation of the author.\n\n\nExercises\nAgain I quote the full question text and then try my own solution. If my solution is not correct or I cant find a solution I will note this in a personal callout and will correct the solution. If my solution is correct but with a different method I will also reflect on the result, but will not adapt or change my solution.\nExperiments\nHere I am trying to make my own exercises. Most of the examples are replications of the book figures because the author has not included the R code. Additionally I cross referenced to the figure from the first part, the author section. If you hover over the cross reference link you will get the authors figure overlaid and can compare it with my replication.\nWriting my own R chunks I am using the tidy approach with the collection of the {tidyverse} packages, especially with {ggplot2} for the figures. But instead of using the library() command I always mention the used packages explicitly. Whenever I used another packages I called the function with the package name in front with the syntax &lt;package name&gt;::&lt;function name&gt;(), like ggplot2::gplot(). This is tedious work but it helps me to learn & remember which command “belongs” to which package. Only exception is the {patchwork} package, as I do not know how to call commands like p1 + p2 with the package name.\nIn graphics I use not only caption for figures but also captions for the R code. There is no easy standardized way to use code listings with captions and to evaluate the code at the same time, but I found a workaround with the following structure of code options in the code chunk:\n#| label: fig-name\n#| fig-cap: \"fig-title\"\n#| attr-source: '#lst-fig-name lst-cap=\"list-title\"'\nThis code generates a warning because at the moment the = symbol is not allowed in RStudio when running a R chunks interactively in a Quarto document. See issue 13326. Although I got a warning the code does what I want: It gives the figure and the code listing a heading and evaluates the code at the same time.",
     "crumbs": [
       "Preface"
     ]
@@ -324,7 +324,7 @@
     "href": "index.html#glossary",
     "title": "Bayesian Statistics the Fun Way. Een notitieboek",
     "section": "Glossary",
-    "text": "Glossary\nI started a glossary using the {glossary} package by Lisa DeBruine (glossary?). A glossary entry is visualized with a double underline. Every chapter has a section where the text of all glossary entries of the chapter are displayed. When you hover with the mouse over the link it opens a pop-up window with the glossary text. You can see example in the section about my motivation for this ebook (See About My Motivation for this Quarto Book).\nI am using this glossary for all my other Quarto books but it is till work in progress. Please keep in mind that I collected the definition at various places and be attentive because there is no guarantee that the entry is appropriate and correct. I have added the sources where I got the content for the glossary entry.",
+    "text": "Glossary\nI started a glossary using the {glossary} package by Lisa DeBruine (glossary?). A glossary entry is visualized with a double underline. Every chapter has a section where the text of all glossary entries of the chapter are displayed. When you hover with the mouse over the link it opens a pop-up window with the glossary text. You can see example in the section about my motivation for this ebook (See About My Motivation for this Quarto Book).\nI am using this glossary for all my other Quarto books but it is till work in progress. Please keep in mind that I collected the definition at various places and be attentive because there is no guarantee that the entry is appropriate and correct. I have added the sources where I got the content for the glossary entry.\n\n\n\n\n\n\nNote\n\n\n\nLoad glossary\n\nInstall the package glossary https://debruine.github.io/glossary/\n\nlibrary(glossary)\nIf you want to see Baumgartner’s glossary:\n\nfork his repository https://github.com/petzi53/glossary-pb\nDownload the glossary-pb repository to your computer https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)\nStore the file on your hard disk and change the following path to your path\n\nglossary::glossary_path(\"../glossary.yml\")\n\n\n::: ## Session Info\nEvery chapter ends with a session information printed with the sessionInfo() function.\n\n\n\n\n\n\nWarning\n\n\n\nI wrote this book as a text for others to read because that forces me to be become explicit and explain all my learning outcomes more carefully. Please keep in mind that this text is not written by an expert but by a learner. In spite of replicating most of the content it may contain many mistakes. All these misapprehensions and errors are my responsibility.\nIn any case I am the only responsible person for this text, especially if I have used code from the resources wrongly or misunderstood a quoted text passage.",
     "crumbs": [
       "Preface"
     ]
@@ -335,6 +335,96 @@
     "title": "Bayesian Statistics the Fun Way. Een notitieboek",
     "section": "Session Info",
     "text": "Session Info\nEvery chapter ends with a session information printed with the sessionInfo() function.\n\n\n\n\n\n\nWarning\n\n\n\nI wrote this book as a text for others to read because that forces me to be become explicit and explain all my learning outcomes more carefully. Please keep in mind that this text is not written by an expert but by a learner. In spite of replicating most of the content it may contain many mistakes. All these misapprehensions and errors are my responsibility.\nIn any case I am the only responsible person for this text, especially if I have used code from the resources wrongly or misunderstood a quoted text passage.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#install-the-package-glossary",
+    "href": "index.html#install-the-package-glossary",
+    "title": "Bayesian Statistics the Fun Way. Een notitieboek",
+    "section": "1. Install the package glossary",
+    "text": "1. Install the package glossary",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#httpsdebruine.github.ioglossary",
+    "href": "index.html#httpsdebruine.github.ioglossary",
+    "title": "Bayesian Statistics the Fun Way. Een notitieboek",
+    "section": "https://debruine.github.io/glossary/",
+    "text": "https://debruine.github.io/glossary/\nlibrary(glossary)",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#if-you-want-to-see-baumgartners-glossary",
+    "href": "index.html#if-you-want-to-see-baumgartners-glossary",
+    "title": "Bayesian Statistics the Fun Way. Een notitieboek",
+    "section": "If you want to see Baumgartner’s glossary:",
+    "text": "If you want to see Baumgartner’s glossary:",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#fork-his-repository",
+    "href": "index.html#fork-his-repository",
+    "title": "Bayesian Statistics the Fun Way. Een notitieboek",
+    "section": "1. fork his repository",
+    "text": "1. fork his repository",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#httpsgithub.competzi53glossary-pb",
+    "href": "index.html#httpsgithub.competzi53glossary-pb",
+    "title": "Bayesian Statistics the Fun Way. Een notitieboek",
+    "section": "https://github.com/petzi53/glossary-pb",
+    "text": "https://github.com/petzi53/glossary-pb",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#download-the-glossary-pb-repository-to-your-computer",
+    "href": "index.html#download-the-glossary-pb-repository-to-your-computer",
+    "title": "Bayesian Statistics the Fun Way. Een notitieboek",
+    "section": "2. Download the glossary-pb repository to your computer",
+    "text": "2. Download the glossary-pb repository to your computer",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#httpsgithub.competzi53glossary-pbblobmasterglossary.yml",
+    "href": "index.html#httpsgithub.competzi53glossary-pbblobmasterglossary.yml",
+    "title": "Bayesian Statistics the Fun Way. Een notitieboek",
+    "section": "https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)",
+    "text": "https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#store-the-file-on-your-hard-disk",
+    "href": "index.html#store-the-file-on-your-hard-disk",
+    "title": "Bayesian Statistics the Fun Way. Een notitieboek",
+    "section": "3. Store the file on your hard disk",
+    "text": "3. Store the file on your hard disk",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#and-change-the-following-path-to-your-path",
+    "href": "index.html#and-change-the-following-path-to-your-path",
+    "title": "Bayesian Statistics the Fun Way. Een notitieboek",
+    "section": "and change the following path to your path",
+    "text": "and change the following path to your path\nglossary::glossary_path(“../glossary.yml”)",
     "crumbs": [
       "Preface"
     ]

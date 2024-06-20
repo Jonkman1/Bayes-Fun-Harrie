@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.553">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Peter Baumgartner, bewerkt Harrie Jonkman">
 <meta name="dcterms.date" content="2024-06-18">
-
 <title>Bayesian Statistics the Fun Way. Een notitieboek</title>
 <style>
 code{white-space: pre-wrap;}
@@ -58,7 +55,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -75,8 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -102,19 +97,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="quarto.css">
+}</script><link rel="stylesheet" href="quarto.css">
 <link rel="stylesheet" href="glossary.css">
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -125,13 +114,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Bayesian Statistics the Fun Way. Een notitieboek</a> 
     </div>
@@ -143,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Preface</span></a>
@@ -190,35 +175,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+<li>
+<a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
   <ul>
-  <li><a href="#sec-book-motivation" id="toc-sec-book-motivation" class="nav-link" data-scroll-target="#sec-book-motivation">About My Motivation for this Quarto Book</a></li>
-  <li><a href="#content-and-goals-of-this-book" id="toc-content-and-goals-of-this-book" class="nav-link" data-scroll-target="#content-and-goals-of-this-book">Content and Goals of this Book</a>
+<li><a href="#sec-book-motivation" id="toc-sec-book-motivation" class="nav-link" data-scroll-target="#sec-book-motivation">About My Motivation for this Quarto Book</a></li>
+  <li>
+<a href="#content-and-goals-of-this-book" id="toc-content-and-goals-of-this-book" class="nav-link" data-scroll-target="#content-and-goals-of-this-book">Content and Goals of this Book</a>
   <ul>
-  <li><a href="#short-summaries-of-the-book-content" id="toc-short-summaries-of-the-book-content" class="nav-link" data-scroll-target="#short-summaries-of-the-book-content">Short summaries of the book content</a></li>
+<li><a href="#short-summaries-of-the-book-content" id="toc-short-summaries-of-the-book-content" class="nav-link" data-scroll-target="#short-summaries-of-the-book-content">Short summaries of the book content</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   <li><a href="#experiments" id="toc-experiments" class="nav-link" data-scroll-target="#experiments">Experiments</a></li>
-  </ul></li>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
-  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session Info</a></li>
-  </ul></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
+  </ul>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Bayesian Statistics the Fun Way. Een notitieboek</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -245,11 +227,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header>
-
-
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
+</header><section id="preface" class="level1 unnumbered"><h1 class="unnumbered">Preface</h1>
 <div class="callout callout-style-default callout-note callout-titled" style="color: blue;">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -264,20 +242,16 @@ This is work in progress: about 95%.
 </div>
 </div>
 <p>This Quarto book collects my personal notes, trials and exercises of the <a href="https://nostarch.com/learnbayes">Bayesian Statistics the Fun Way: Understanding Statistics and Probability With Star Wars, LEGO, and Rubber Ducks</a> by Will Kurt <span class="citation" data-cites="kurt2019">(<a href="#ref-kurt2019" role="doc-biblioref"><strong>kurt2019?</strong></a>)</span>.</p>
-<section id="sec-book-motivation" class="level2">
-<h2 class="anchored" data-anchor-id="sec-book-motivation">About My Motivation for this Quarto Book</h2>
+<section id="sec-book-motivation" class="level2"><h2 class="anchored" data-anchor-id="sec-book-motivation">About My Motivation for this Quarto Book</h2>
 <p>I am not an expert in statistics. During my study in sociology back in 1970er I had only rudimentary learned about frequentist statistics (GLOSSARY). There weren’t computer only via time-sharing and keypunching for card-to-tape converter available. This was painstaking and not motivating because it had not much practical values. 10 years later I worked sometimes with SPSS but used — as many of my colleagues — the “statistics all” option without much understanding. It was no fun and so I dedicated most of my time to theoretical work and later sometimes to qualitative social research via <a href="https://en.wikipedia.org/wiki/Grounded_theory">grounded theory</a>.</p>
 <p>Only when I heard 2015 about R and began to exerpiment with it, I started my self-directed education in statistics again. Still I was not so intrigued by Null Hypothesis Statistical Testing (NHST) but more from Data Science. I noticed the problems with p-values and was therefore fascinated with <a href="https://thenewstatistics.com/itns/">Introduction to the New Statistics</a> by Geoff Cumming &amp; Robert Calin-Jageman <span class="citation" data-cites="cumming2017">(<a href="#ref-cumming2017" role="doc-biblioref"><strong>cumming2017?</strong></a>)</span>. Instead of concentrating on p-values the book teaches the importance of confidence interval,confidence intervals (GLOSSARY), (CIs). But at that time I came across some discussion about Bayesian statistics (GLOSSARY. I read <a href="https://www.jstor.org/stable/j.ctt1np76s">The Theory That Would Not Die</a>: How Bayes’ Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant From Two Centuries of Controversy by Sharon Bertsch McGrayne <span class="citation" data-cites="mcgrayne2011">(<a href="#ref-mcgrayne2011" role="doc-biblioref"><strong>mcgrayne2011?</strong></a>)</span> but didn’t understand at that time how Bayesian statistics works.</p>
 <p>The real game changer for me then was <a href="https://www.routledge.com/Statistical-Rethinking-A-Bayesian-Course-with-Examples-in-R-and-STAN/McElreath/p/book/9780367139919">Statistical Rethinking</a> by Richard McElreath <span class="citation" data-cites="mcelreath2020">(<a href="#ref-mcelreath2020" role="doc-biblioref"><strong>mcelreath2020?</strong></a>)</span>. I immediately started <a href="https://bookdown.org/pbaumgartner/sr2-notes/">my first Quarto book</a> with notes about the book and the companion bookdown website <a href="https://bookdown.org/content/4857/"><em>Statistical rethinking</em> with brms, ggplot2, and the tidyverse: Second edition</a> by A Solomon Kurz. But unfortunately after four chapters I noticed that I am lacking basic knowledge and looked around for other books on Bayesian statistics that are easier to digest for me. I tried A Student’s Guide to Bayesian Statistics by Ben Lambert <span class="citation" data-cites="lambert2018">(<a href="#ref-lambert2018" role="doc-biblioref"><strong>lambert2018?</strong></a>)</span>, but I stopped reading it after chapter eight. I has to much theory for me and I was missing the opportunity trying my own hands out with R.</p>
 <p>So finally I came around to Will Kurt’s book. I understand that the modern simulation methods like MCMC are not in the focus of the book and also the usage of R code is distributed very sparsely in the book. But I learned (and understood) many Bayesian concepts and could all the graphics in the book — where the R code is missing — replicate with {<strong>ggplot2</strong>} <span class="citation" data-cites="ggplot2">(<a href="#ref-ggplot2" role="doc-biblioref"><strong>ggplot2?</strong></a>)</span> in tidyverse <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref"><strong>tidyverse?</strong></a>)</span> style. The book was at the time (September/October 2023) a perfect match for my rudimentary knowledge. I have now more trust to continue with Statistical Rethinking or — as a possible alternative — to start with a new Quarto book on <a href="https://sites.google.com/site/doingbayesiandataanalysis/">Doing Bayesian Data Analysis: A Tutorial With R, JAGS, and Stan</a> <span class="citation" data-cites="kruschke2014">(<a href="#ref-kruschke2014" role="doc-biblioref"><strong>kruschke2014?</strong></a>)</span> which I have already read and (I believe) mostly understood.</p>
 <p>Another motivation to write a Quarto book was to learn how to use <a href="https://quarto.org/">Quarto</a>. I already wrote some books with bookdown <span class="citation" data-cites="bookdown">(<a href="#ref-bookdown" role="doc-biblioref"><strong>bookdown?</strong></a>)</span> but Quarto was relatively new for me. This book was therefore a good occasion to learn and experiment with the functionality of Quarto.</p>
-</section>
-<section id="content-and-goals-of-this-book" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="content-and-goals-of-this-book">Content and Goals of this Book</h2>
+</section><section id="content-and-goals-of-this-book" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="content-and-goals-of-this-book">Content and Goals of this Book</h2>
 <p>This book collects personal notes during reading of <a href="https://nostarch.com/learnbayes">Bayesian Statistics the Fun Way</a> by Will Kurt. Additionally I am using <a href="https://nostarch.com/download/resources/Bayes_exercise_solutions_new.pdf">C: Answers to Exercises</a></p>
 <p>Each chapter of the book has three main parts:</p>
-<section id="short-summaries-of-the-book-content" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="short-summaries-of-the-book-content">Short summaries of the book content</h3>
+<section id="short-summaries-of-the-book-content" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="short-summaries-of-the-book-content">Short summaries of the book content</h3>
 <p>This summarizes my own highlights but gives also the necessary information for my section about “Experiments”. Mostly I quote the text but without page references. Often I made minor editing (e.g., shorting the text) or put sometimes the content in my own wording. As I follow the text section by section reader can easily find the quoted passage.</p>
 <p>Almost all of my text of this first part of the Quarto book are not mine, but is coming from the resources mentioned above. There are two exceptions:</p>
 <ul>
@@ -298,30 +272,45 @@ Important
 <p>Although I have quoted many passages from the original as highlights for me to remember, this Quarto ebook is not meant to stand alone. My summaries are driven by my personal interests and my huge gaps in my statistical knowledge and especially in Bayesian statistics. My notes are therefore in no way a substitute for Will Kurt’s book <a href="https://nostarch.com/learnbayes">Bayesian Statistics the Fun Way: Understanding Statistics and Probability With Star Wars, LEGO, and Rubber Ducks</a> by Will Kurt <span class="citation" data-cites="kurt2019">(<a href="#ref-kurt2019" role="doc-biblioref"><strong>kurt2019?</strong></a>)</span>. Please buy the book so that you can embed my notes appropriately in the general argumentation of the author.</p>
 </div>
 </div>
-</section>
-<section id="exercises" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="exercises">Exercises</h3>
+</section><section id="exercises" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="exercises">Exercises</h3>
 <p>Again I quote the full question text and then try my own solution. If my solution is not correct or I cant find a solution I will note this in a personal callout and will correct the solution. If my solution is correct but with a different method I will also reflect on the result, but will not adapt or change my solution.</p>
-</section>
-<section id="experiments" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="experiments">Experiments</h3>
+</section><section id="experiments" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="experiments">Experiments</h3>
 <p>Here I am trying to make my own exercises. Most of the examples are replications of the book figures because the author has not included the R code. Additionally I cross referenced to the figure from the first part, the author section. If you hover over the cross reference link you will get the authors figure overlaid and can compare it with my replication.</p>
-<p>Writing my own R chunks I am using the tidy approach with the collection of the {<strong>tidyverse</strong>} packages, especially with {<strong>ggplot2</strong>} for the figures. But instead of using the <code>library()</code> command I always mention the used packages explicitly. Whenever I used another packages I called the function with the package name in front with the syntax <code>&lt;package name&gt;::&lt;function name&gt;()</code>, like <code>ggplot2::gplot()</code>. This is tedious work but it helps me to learn &amp; remember which command “belongs” to which package. Only exception is the {<strong>patchwork</strong>} package, as I do not know how to call commands like <code>p1 + p2</code> with the package name.</p>
+<p>Writing my own R chunks I am using the tidy approach with the collection of the {<strong>tidyverse</strong>} packages, especially with {<strong>ggplot2</strong>} for the figures. But instead of using the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> command I always mention the used packages explicitly. Whenever I used another packages I called the function with the package name in front with the syntax <code>&lt;package name&gt;::&lt;function name&gt;()</code>, like <code>ggplot2::gplot()</code>. This is tedious work but it helps me to learn &amp; remember which command “belongs” to which package. Only exception is the {<strong>patchwork</strong>} package, as I do not know how to call commands like <code>p1 + p2</code> with the package name.</p>
 <p>In graphics I use not only caption for figures but also captions for the R code. There is no easy standardized way to use code listings with captions and to evaluate the code at the same time, but I <a href="https://github.com/quarto-dev/quarto-cli/issues/1580#issuecomment-1552673825">found a workaround</a> with the following structure of code options in the code chunk:</p>
 <pre><code>#| label: fig-name
 #| fig-cap: "fig-title"
 #| attr-source: '#lst-fig-name lst-cap="list-title"'</code></pre>
 <p>This code generates a warning because at the moment the <code>=</code> symbol is not allowed in RStudio when running a R chunks interactively in a Quarto document. <a href="https://github.com/rstudio/rstudio/issues/13326">See issue 13326</a>. Although I got a warning the code does what I want: It gives the figure and the code listing a heading and evaluates the code at the same time.</p>
-</section>
-</section>
-<section id="glossary" class="level2">
-<h2 class="anchored" data-anchor-id="glossary">Glossary</h2>
+</section></section><section id="glossary" class="level2"><h2 class="anchored" data-anchor-id="glossary">Glossary</h2>
 <p>I started a glossary using the {<a href="https://cran.r-project.org/web/packages/glossary/index.html"><strong>glossary</strong></a>} package by Lisa DeBruine <span class="citation" data-cites="glossary">(<a href="#ref-glossary" role="doc-biblioref"><strong>glossary?</strong></a>)</span>. A glossary entry is visualized with a double underline. Every chapter has a section where the text of all glossary entries of the chapter are displayed. When you hover with the mouse over the link it opens a pop-up window with the glossary text. You can see example in the section about my motivation for this ebook (See <a href="#sec-book-motivation" class="quarto-xref"><span>About My Motivation for this Quarto Book</span></a>).</p>
 <p>I am using this glossary for all my other Quarto books but it is till work in progress. Please keep in mind that I collected the definition at various places and be attentive because there is no guarantee that the entry is appropriate and correct. I have added the sources where I got the content for the glossary entry.</p>
-</section>
-<section id="session-info" class="level2">
-<h2 class="anchored" data-anchor-id="session-info">Session Info</h2>
-<p>Every chapter ends with a session information printed with the <code>sessionInfo()</code> function.</p>
+<div class="callout callout-style-default callout-note callout-titled" style="color: orange;">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Load glossary</p>
+<ol type="1">
+<li>Install the package glossary https://debruine.github.io/glossary/</li>
+</ol>
+<p><code><a href="https://rdrr.io/r/base/library.html">library(glossary)</a></code></p>
+<p>If you want to see Baumgartner’s glossary:</p>
+<ol type="1">
+<li><p>fork his repository https://github.com/petzi53/glossary-pb</p></li>
+<li><p>Download the <code>glossary-pb</code> repository to your computer https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)</p></li>
+<li><p>Store the file on your hard disk and change the following path to your path</p></li>
+</ol>
+<p><code>glossary::glossary_path("../glossary.yml")</code></p>
+</div>
+</div>
+<p>::: ## Session Info</p>
+<p>Every chapter ends with a session information printed with the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -340,11 +329,7 @@ Warning
 
 <!-- -->
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -803,9 +788,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
       <a href="./00-intro.html" class="pagination-link" aria-label="Introduction">
@@ -997,27 +980,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>entry is appropriate and correct. I have added the sources where I got</span>
 <span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>the content for the glossary entry.</span>
 <span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session Info</span></span>
-<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>Every chapter ends with a session information printed with the</span>
-<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="in">`sessionInfo()`</span> function.</span>
-<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
-<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a><span class="fu">###### Warning</span></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>::: {.callout-note style="color: orange;"}</span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>Load glossary</span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Install the package glossary</span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>https://debruine.github.io/glossary/</span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a><span class="in">`library(glossary)`</span></span>
 <span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>I wrote this book as a text for others to read because that forces me to</span>
-<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>be become explicit and explain all my learning outcomes more carefully.</span>
-<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>Please keep in mind that this text is not written by an expert but by a</span>
-<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>learner. In spite of replicating most of the content it may contain many</span>
-<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>mistakes. All these misapprehensions and errors are my responsibility.</span>
-<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>In any case I am the only responsible person for this text, especially</span>
-<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>if I have used code from the resources wrongly or misunderstood a quoted</span>
-<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>text passage.</span>
-<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>If you want to see Baumgartner's glossary:</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>fork his repository</span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>https://github.com/petzi53/glossary-pb</span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Download the <span class="in">`glossary-pb`</span> repository to your computer</span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)</span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Store the file on your hard disk and change the following path to your path</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a><span class="in">`glossary::glossary_path("../glossary.yml")`</span></span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session Info</span></span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>Every chapter ends with a session information printed with the</span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="in">`sessionInfo()`</span> function.</span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a><span class="fu">###### Warning</span></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>I wrote this book as a text for others to read because that forces me to</span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>be become explicit and explain all my learning outcomes more carefully.</span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a>Please keep in mind that this text is not written by an expert but by a</span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a>learner. In spite of replicating most of the content it may contain many</span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>mistakes. All these misapprehensions and errors are my responsibility.</span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>In any case I am the only responsible person for this text, especially</span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>if I have used code from the resources wrongly or misunderstood a quoted</span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>text passage.</span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-
 
 
 

@@ -182,6 +182,53 @@ various places and be attentive because there is no guarantee that the
 entry is appropriate and correct. I have added the sources where I got
 the content for the glossary entry.
 
+### Glossary
+
+I am using the {**glossary**} package to create links to glossary
+entries. (See @pak-glossary). [Glossaries for Markdown and Quarto Documents](https://cran.r-project.org/package=glossary)
+
+
+::: my-r-code
+::: my-r-code-header
+::: {#cnj-load-glossary}
+: Load glossary
+:::
+:::
+
+::: my-r-code-container
+
+
+```{r}
+#| label: load-glossary
+#| lst-label: lst-preface-load-glossary
+#| lst-cap: "Install and load the glossary package with the appropriate glossary.yml file"
+
+
+## 1. Install the glossary package:
+## https://debruine.github.io/glossary/
+
+library(glossary)
+
+## If you want to use my glossary.yml file:
+
+## 1. fork my repo
+##    https://github.com/petzi53/glossary-pb
+
+## 2. Download the `glossary.yml` file from
+##    https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)
+
+## 3. Store the file on your hard disk
+##    and change the following path accordingly
+
+glossary::glossary_path("glossary.yml")
+
+```
+
+
+:::
+:::
+
+:::
 ## Session Info
 
 Every chapter ends with a session information printed with the
