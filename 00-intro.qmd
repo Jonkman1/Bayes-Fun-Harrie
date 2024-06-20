@@ -4,8 +4,16 @@ engine: knitr
 
 # Introduction {.unnumbered}
 
-Frequentist statistics (GLOSSARY) is founded on the idea that
-probability represents the frequency with which something happens.
-Bayesian statistics (GLOSSARY), on the other hand, is concerned
+**Frequentist statistics** is founded on the idea that probability represents the frequency with which something happens.
+
+:::{.column-margin}
+Frequentist statistics is a branch of statistics that interprets probability as the long-run frequency of events in repeated trials, focusing on parameter estimation, hypothesis testing, and confidence intervals without incorporating prior beliefs
+:::
+
+**Bayesian statistics** on the other hand, is concerned
 with how probabilities represent how uncertain we are about a piece of
 information.
+
+:::{.column-margin}
+Bayesian statistics is a branch of statistics that interprets probability as a measure of belief or certainty, updating prior beliefs with new evidence using Bayes' theorem to provide a posterior probability distribution for parameters of interest.
+:::
