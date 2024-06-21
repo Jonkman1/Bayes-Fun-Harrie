@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.553">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Bayesian Statistics the Fun Way. Een notitieboek - 2&nbsp; Summary</title>
+<title>Bayesian Statistics the Fun Way. Een notitieboek - 2&nbsp; Measuring Uncertainty</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,7 +53,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -74,8 +70,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -101,36 +96,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="quarto.css">
+}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="quarto.css">
 <link rel="stylesheet" href="glossary.css">
 </head>
-
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-measuring-uncertainty.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-measuring-uncertainty.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Uncertainty</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Bayesian Statistics the Fun Way. Een notitieboek</a> 
     </div>
@@ -142,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
@@ -167,41 +177,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-measuring-uncertainty.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Uncertainty</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03-logic-uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Logic of Uncertainty</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04-binomial-distribution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating a Binomial Probability Distribution</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-beta-distribution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Beta Distribution</span></span></a>
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#what-is-probability" id="toc-what-is-probability" class="nav-link active" data-scroll-target="#what-is-probability"><span class="header-section-number">2.1</span> What is Probability?</a></li>
+  <li><a href="#calculating-probabilities-by-counting-outcomes-of-events" id="toc-calculating-probabilities-by-counting-outcomes-of-events" class="nav-link" data-scroll-target="#calculating-probabilities-by-counting-outcomes-of-events"><span class="header-section-number">2.2</span> Calculating Probabilities by Counting Outcomes of Events</a></li>
+  <li>
+<a href="#calculating-probabilities-as-ratios-of-beliefs" id="toc-calculating-probabilities-as-ratios-of-beliefs" class="nav-link" data-scroll-target="#calculating-probabilities-as-ratios-of-beliefs"><span class="header-section-number">2.3</span> Calculating Probabilities as Ratios of Beliefs</a>
+  <ul>
+<li><a href="#using-odds-to-determine-probability" id="toc-using-odds-to-determine-probability" class="nav-link" data-scroll-target="#using-odds-to-determine-probability"><span class="header-section-number">2.3.1</span> Using Odds to Determine Probability</a></li>
+  <li><a href="#solving-for-the-probabilities" id="toc-solving-for-the-probabilities" class="nav-link" data-scroll-target="#solving-for-the-probabilities"><span class="header-section-number">2.3.2</span> Solving for the Probabilities</a></li>
+  <li><a href="#measuring-beliefs-in-a-coin-toss" id="toc-measuring-beliefs-in-a-coin-toss" class="nav-link" data-scroll-target="#measuring-beliefs-in-a-coin-toss"><span class="header-section-number">2.3.3</span> Measuring Beliefs in a Coin Toss</a></li>
+  </ul>
+</li>
+  <li><a href="#wrapping-up" id="toc-wrapping-up" class="nav-link" data-scroll-target="#wrapping-up"><span class="header-section-number">2.4</span> Wrapping Up</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">2.5</span> Exercises</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">
+<span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Uncertainty</span>
+</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -215,23 +238,132 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header>
-
-
-<p>In summary, this book has no content whatsoever.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+</header><section id="what-is-probability" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="what-is-probability">
+<span class="header-section-number">2.1</span> What is Probability?</h2>
+<p>Probability is a measurement of how strongly we believe things about the world. We can consider probability an extension of logic. Probability allows us to extend logic not only to work with absolute beliefs (true and false) but also to work with uncertain values (values between true and false).</p>
+<p>An important part of logic is <em>negation.</em> When we say “not true” we mean false. Likewise, saying “not false” means true. We want probability to work the same way, so we make sure that the probability of X and the negation of the probability of X sum to 1 (in other words, values are either X, or not X).</p>
+<p><span id="eq-negation"><span class="math display">\[P(X) + \neg{P(X)} = 1 \tag{2.1}\]</span></span></p>
+</section><section id="calculating-probabilities-by-counting-outcomes-of-events" class="level2 page-columns page-full" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="calculating-probabilities-by-counting-outcomes-of-events">
+<span class="header-section-number">2.2</span> Calculating Probabilities by Counting Outcomes of Events</h2>
+<p>The most common way to calculate probability is to count outcomes of events. We have two sets of outcomes that are important:</p>
+<ol type="1">
+<li>All possible outcomes of an event. For a coin toss, this would be “heads” or “tails.”</li>
+<li>The count of the outcomes you’re interested in. If you’ve decided that heads means you win, the outcomes you care about are those involving heads.</li>
+</ol>
+<p>In probability theory, we use <span class="math inline">\(\Omega\)</span> (the capital Greek letter omega) to indicate the set of all events:</p>
+<p><span id="eq-omega"><span class="math display">\[\Omega = \{heads, tails\} \tag{2.2}\]</span></span></p>
+<div id="exm-1head-2-coins" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.1</strong></span> What is the probability of getting at least one heads when we toss two coins?</p>
+<ol type="1">
+<li>Count the list of all possible events:</li>
+</ol>
+<p><span id="eq-possible-events"><span class="math display">\[\Omega = \{(heads, heads), (heads, tails), (tails, heads), (tails, tails) \} \tag{2.3}\]</span></span></p>
+<ol start="2" type="1">
+<li>How many events match our condition?</li>
+</ol>
+<p><span id="eq-matching-events"><span class="math display">\[\{(heads, heads), (heads, tails), (tails, heads) \} \tag{2.4}\]</span></span></p>
+<ol start="3" type="1">
+<li>Divide number of matches by number of all possible events:</li>
+</ol>
+<p><span class="math display">\[\frac{3}{4}\]</span> Solving harder probability problems of this nature often involves a field of mathematics called <strong>combinatorics</strong>.</p>
 </div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Combinatorics</strong> is an area of mathematics primarily concerned with counting. (BS, Chap.2) One of the basic problems of combinatorics is to determine the number of possible configurations of a given type. (<a href="https://www.britannica.com/science/combinatorics">Britannica</a>)</p>
+</div></div></section><section id="calculating-probabilities-as-ratios-of-beliefs" class="level2 page-columns page-full" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="calculating-probabilities-as-ratios-of-beliefs">
+<span class="header-section-number">2.3</span> Calculating Probabilities as Ratios of Beliefs</h2>
+<p>Counting events is only useful for physical objects. How to reason about more abstract problems? – Making bets is a practical way that we can express how strongly we hold our beliefs.</p>
+<section id="using-odds-to-determine-probability" class="level3 page-columns page-full" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="using-odds-to-determine-probability">
+<span class="header-section-number">2.3.1</span> Using Odds to Determine Probability</h3>
+<p><strong>Odds</strong> are a common way to represent beliefs as a ratio of how much you would be willing to pay if you were wrong about the outcome of an event to how much you’d want to receive for being correct. For example, say the odds of a horse winning a race are 12 to 1.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>*<strong>Odds</strong> Odds is usually defined in statistics as the probability an event will occur divided by the probability that it will not occur. An odds ratio (OR) is a measure of association between a certain property A and a second property B in a population. Specifically, it tells you how the presence or absence of property A has an effect on the presence or absence of property B. (<a href="https://www.statisticshowto.com/probability-and-statistics/probability-main-index/odds-ratio/">Statistics How To</a>). An odds ratio is a ratio of two ratios. They quantify the strength of the relationship between two conditions. They indicate how likely an outcome is to occur in one context relative to another. (<a href="https://statisticsbyjim.com/probability/odds-ratio/">Statistics by Jim</a>)</p>
+</div></div><p>Odds have a simple relation with <strong>probabilities</strong>: the odds of an outcome are the ratio of the probability that the outcome occurs to the probability that the outcome does not occur. In mathematical terms, where p is the probability of the outcome and 1- p is the probability that the outcome does not occur:</p>
+<p><span id="eq-odds-p"><span class="math display">\[odds = \frac{p}{1-p} \tag{2.5}\]</span></span></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Probability is a mathematical tool used to study randomness. It deals with the chance of an event occurring. (<a href="https://openstax.org/books/statistics/pages/1-1-definitions-of-statistics-probability-and-key-terms">OpenStax: Statistics</a>) In the discrete case, to calculate the probability that a random variable takes on any value within a range, we sum the individual probabilities corresponding to each of the values. We use Pr to explicitly state that the result is a probability from a discrete probability distribution, whereas p(value) is a probability density from a continuous probability distribution. (Bayesian Statistics, Chap.3)</p>
+</div></div></section><section id="solving-for-the-probabilities" class="level3" data-number="2.3.2"><h3 data-number="2.3.2" class="anchored" data-anchor-id="solving-for-the-probabilities">
+<span class="header-section-number">2.3.2</span> Solving for the Probabilities</h3>
+<p>Using algebra we can convert <a href="#eq-odds-p" class="quarto-xref">Equation&nbsp;<span>2.5</span></a> to find the probability of a hypotheses:</p>
+<p><span id="eq-p-odds"><span class="math display">\[p = \frac{odds}{1 + odds} \tag{2.6}\]</span></span></p>
+</section><section id="measuring-beliefs-in-a-coin-toss" class="level3" data-number="2.3.3"><h3 data-number="2.3.3" class="anchored" data-anchor-id="measuring-beliefs-in-a-coin-toss">
+<span class="header-section-number">2.3.3</span> Measuring Beliefs in a Coin Toss</h3>
+<p>Rather than thinking about a coin toss as an event, we can rephrase the question as “How strongly do I believe the next coin toss will be heads?” Now we’re not talking about <span class="math inline">\(P(heads)\)</span> but rather a hypothesis or belief about the coin toss, <span class="math inline">\(P(H_{heads})\)</span>. Just like before, we need an alternate hypothesis to compare our belief with.</p>
+</section></section><section id="wrapping-up" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="wrapping-up">
+<span class="header-section-number">2.4</span> Wrapping Up</h2>
+<ul>
+<li>We explored two different types of probabilities: those of events and those of beliefs.</li>
+<li>We defined probability as the ratio of the outcome(s) we care about to the number of all possible outcomes.</li>
+</ul>
+<p>While this is the most common definition of probability, it is difficult to apply to beliefs because most practical, everyday probability problems do not have clear-cut outcomes and so aren’t intuitively assigned discrete numbers. To calculate the probability of beliefs, then, we need to establish <em>how many times more we believe in one hypothesis over another</em>. One good test of this is how much you would be willing to bet on your belief</p>
+</section><section id="exercises" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="exercises">
+<span class="header-section-number">2.5</span> Exercises</h2>
+<p>Try answering the following questions to make sure you understand how we can assign real values between 0 and 1 to our beliefs.</p>
+<div id="exm-02-1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.2</strong></span> What is the probability of rolling two six-sided dice and getting a value greater than 7?</p>
+<p>Following <a href="#exm-1head-2-coins" class="quarto-xref">Example&nbsp;<span>2.1</span></a>:</p>
+<ol type="1">
+<li>
+<a href="#eq-possible-events" class="quarto-xref">Equation&nbsp;<span>2.3</span></a>: <span class="math inline">\(36\)</span>
+</li>
+</ol>
+<p><span class="math display">\[
+\begin{align*}
+\Omega = \{(1,1), (1,2), (1,3), (1,4), (1,5), (1,6) \\
+(2,1), (2,2), (2,3), (2,4), (2,5), (2,6) \\
+(3,1), (3,2), (3,3), (3,4), (3,5), (3,6) \\
+(4,1), (4,2), (4,3), (4,4), (4,5), (4,6) \\
+(5,1), (5,2), (5,3), (5,4), (5,5), (5,6) \\
+(6,1), (6,2), (6,3), (6,4), (6,5), (6,6) \}
+\end{align*}
+\]</span> 2. <a href="#eq-matching-events" class="quarto-xref">Equation&nbsp;<span>2.4</span></a>: <span class="math inline">\(15\)</span></p>
+<p><strong>Solution</strong>:</p>
+<p><span class="math display">\[\frac{15}{36} = \frac{5}{12}\]</span></p>
+</div>
+<hr>
+<div id="exm-02-2" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2.3</strong></span> What is the probability of rolling three six-sided dice and getting a value greater than 7?</p>
+<p><strong>Solution</strong>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">possible_events</span> <span class="op">=</span> <span class="va">dice_sum</span> <span class="op">=</span> <span class="va">success</span> <span class="op">=</span> <span class="fl">0</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw">for</span> <span class="op">(</span><span class="va">j</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span> <span class="op">{</span></span>
+<span>        <span class="kw">for</span> <span class="op">(</span><span class="va">k</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span> <span class="op">{</span></span>
+<span>            <span class="va">possible_events</span> <span class="op">&lt;-</span> <span class="va">possible_events</span> <span class="op">+</span> <span class="fl">1</span></span>
+<span>            <span class="va">dice_sum</span> <span class="op">&lt;-</span> <span class="va">i</span> <span class="op">+</span> <span class="va">j</span> <span class="op">+</span> <span class="va">k</span></span>
+<span>            <span class="kw">if</span> <span class="op">(</span><span class="va">dice_sum</span> <span class="op">&gt;</span> <span class="fl">7</span><span class="op">)</span> <span class="op">{</span></span>
+<span>                <span class="va">success</span> <span class="op">&lt;-</span> <span class="va">success</span> <span class="op">+</span> <span class="fl">1</span></span>
+<span>            <span class="op">}</span></span>
+<span>        <span class="op">}</span></span>
+<span>    <span class="op">}</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">'Possible events = {possible_events}, \n'</span>,</span>
+<span>            <span class="st">'Dice value &gt; 7 = {success}, \n'</span>,</span>
+<span>           <span class="st">'Probability = {success} / {possible_events} = {success / possible_events}'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Possible events = 216, 
+Dice value &gt; 7 = 181, 
+Probability = 181 / 216 = 0.837962962962963</code></pre>
+</div>
+</div>
+</div>
+<div class="{exm-02-3}">
+<p>The Yankees are playing the Red Sox. You’re a diehard Sox fan and bet your friend they’ll win the game. You’ll pay your friend $30 if the Sox lose and your friend will have to pay you only $5 if the Sox win. What is the probability you have intuitively assigned to the belief that the Red Sox will win?</p>
+<p><strong>Solution</strong>:</p>
+<p><span class="math display">\[odds = \frac{30}{5} = 6\]</span> Probability is calculated with <a href="#eq-p-odds" class="quarto-xref">Equation&nbsp;<span>2.6</span></a>:</p>
+<p><span class="math display">\[p = \frac{odds}{1 + odds} = \]</span></p>
+<center>
+<span class="math inline">\(p = \frac{6}{1 + 6} = \frac{6}{7}\)</span> = 0.86
+</center>
 </div>
 
 
 <!-- -->
 
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -690,30 +822,172 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./01-everyday-reasoning.html" class="pagination-link" aria-label="Bayesian Thinking and Everyday Reasoning">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bayesian Thinking and Everyday Reasoning</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03-logic-uncertainty.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03-logic-uncertainty.html" class="pagination-link" aria-label="Logic of Uncertainty">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Logic of Uncertainty</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Summary</span></span>
+<div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Measuring Uncertainty</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>In summary, this book has no content whatsoever.</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is Probability?</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>Probability is a measurement of how strongly we believe things about the world. We can consider probability an extension of logic. Probability allows us to extend logic not only to work with absolute beliefs (true and false) but also to work with uncertain values (values between true and false).</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>An important part of logic is *negation.* When we say “not true” we mean false. Likewise, saying “not false” means true. We want probability to work the same way, so we make sure that the probability of X and the negation of the probability of X sum to 1 (in other words, values are either X, or not X). </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>$$P(X) + \neg{P(X)} = 1$$ {#eq-negation}</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Calculating Probabilities by Counting Outcomes of Events</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>The most common way to calculate probability is to count outcomes of events. We have two sets of outcomes that are important:</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>All possible outcomes of an event. For a coin toss, this would be “heads” or “tails.” </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The count of the outcomes you’re interested in. If you’ve decided that heads means you win, the outcomes you care about are those involving heads.</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>In probability theory, we use $\Omega$ (the capital Greek letter omega) to indicate the set of all events:</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>$$\Omega = <span class="sc">\{</span>heads, tails<span class="sc">\}</span>$${#eq-omega}</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>::: {#exm-1head-2-coins}</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>What is the probability of getting at least one heads when we toss two coins? </span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Count the list of all possible events:</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>$$\Omega = <span class="sc">\{</span>(heads, heads), (heads, tails), (tails, heads), (tails, tails) <span class="sc">\}</span>$$ {#eq-possible-events}</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>How many events match our condition?</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>$$<span class="sc">\{</span>(heads, heads), (heads, tails), (tails, heads) <span class="sc">\}</span>$$ {#eq-matching-events}</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Divide number of matches by number of all possible events:</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>$$\frac{3}{4}$$</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>Solving harder probability problems of this nature often involves a field of mathematics called **combinatorics**.</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>:::{.column-margin}</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>**Combinatorics** is an area of mathematics primarily concerned with counting. (BS, Chap.2) One of the basic problems of combinatorics is to determine the number of possible configurations of a given type. (&lt;a href="https://www.britannica.com/science/combinatorics"&gt;Britannica&lt;/a&gt;)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Calculating Probabilities as Ratios of Beliefs</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>Counting events is only useful for physical objects. How to reason about more abstract problems? -- Making bets is a practical way that we can express how strongly we hold our beliefs.</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="fu">### Using Odds to Determine Probability</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>**Odds** are a common way to represent beliefs as a ratio of how much you would be willing to pay if you were wrong about the outcome of an event to how much you’d want to receive for being correct. For example, say the odds of a horse winning a race are 12 to 1.</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>:::{.column-margin}</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>***Odds**  Odds is usually defined in statistics as the probability an event will occur divided by the probability that it will not occur. An odds ratio (OR) is a measure of association between a certain property A and a second property B in a population. Specifically, it tells you how the presence or absence of property A has an effect on the presence or absence of property B. (&lt;a href="https://www.statisticshowto.com/probability-and-statistics/probability-main-index/odds-ratio/"&gt;Statistics How To&lt;/a&gt;). An odds ratio is a ratio of two ratios. They quantify the strength of the relationship between two conditions. They indicate how likely an outcome is to occur in one context relative to another. (&lt;a href="https://statisticsbyjim.com/probability/odds-ratio/"&gt;Statistics by Jim&lt;/a&gt;)</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>Odds have a simple relation with **probabilities**: the odds of an outcome are the ratio of the probability that the outcome occurs to the probability that the outcome does not occur. In mathematical terms, where p is the probability of the outcome and  1- p is the probability that the outcome does not occur:</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>$$odds = \frac{p}{1-p}$$ {#eq-odds-p}</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>:::{.column-margin}</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>Probability is a mathematical tool used to study randomness. It deals with the chance of an event occurring. (<span class="co">[</span><span class="ot">OpenStax: Statistics</span><span class="co">](https://openstax.org/books/statistics/pages/1-1-definitions-of-statistics-probability-and-key-terms)</span>) In the discrete case, to calculate the probability that a random variable takes on any value within a range, we sum the individual probabilities corresponding to each of the values. We use Pr to explicitly state that the result is a probability from a discrete probability distribution, whereas p(value) is a probability density from a continuous probability distribution. (Bayesian Statistics, Chap.3)</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solving for the Probabilities</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>Using algebra we can convert @eq-odds-p to find the probability of a hypotheses:</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>$$p = \frac{odds}{1 + odds}$$ {#eq-p-odds}</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="fu">### Measuring Beliefs in a Coin Toss</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>Rather than thinking about a coin toss as an event, we can rephrase the question as “How strongly do I believe the next coin toss will be heads?” Now we’re not talking about $P(heads)$ but rather a hypothesis or belief about the coin toss, $P(H_{heads})$. Just like before, we need an alternate hypothesis to compare our belief with. </span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## Wrapping Up</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We explored two different types of probabilities: those of events and those of beliefs. </span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>We defined probability as the ratio of the outcome(s) we care about to the number of all possible outcomes.</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>While this is the most common definition of probability, it is difficult to apply to beliefs because most practical, everyday probability problems do not have clear-cut outcomes and so aren’t intuitively assigned discrete numbers. To calculate the probability of beliefs, then, we need to establish *how many times more we believe in one hypothesis over another*. One good test of this is how much you would be willing to bet on your belief</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercises</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>Try answering the following questions to make sure you understand how we can assign real values between 0 and 1 to our beliefs. </span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>::: {#exm-02-1}</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>What is the probability of rolling two six-sided dice and getting a value greater than 7?</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>Following @exm-1head-2-coins:</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@eq-possible-events: $36$</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>\begin{align*}</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>\Omega = <span class="sc">\{</span>(1,1), (1,2), (1,3), (1,4), (1,5), (1,6) <span class="sc">\\</span> </span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>(2,1), (2,2), (2,3), (2,4), (2,5), (2,6) <span class="sc">\\</span> </span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>(3,1), (3,2), (3,3), (3,4), (3,5), (3,6) <span class="sc">\\</span> </span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>(4,1), (4,2), (4,3), (4,4), (4,5), (4,6) <span class="sc">\\</span> </span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>(5,1), (5,2), (5,3), (5,4), (5,5), (5,6) <span class="sc">\\</span> </span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>(6,1), (6,2), (6,3), (6,4), (6,5), (6,6) <span class="sc">\}</span></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>\end{align*}</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@eq-matching-events:  $15$</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>**Solution**: </span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>$$\frac{15}{36} = \frac{5}{12}$$</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>::: {#exm-02-2}</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>What is the probability of rolling three six-sided dice and getting a value greater than 7?</span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>**Solution**:</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>possible_events <span class="ot">=</span> dice_sum <span class="ot">=</span> success <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) {</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) {</span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> (k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) {</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>            possible_events <span class="ot">&lt;-</span> possible_events <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>            dice_sum <span class="ot">&lt;-</span> i <span class="sc">+</span> j <span class="sc">+</span> k</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> (dice_sum <span class="sc">&gt;</span> <span class="dv">7</span>) {</span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>                success <span class="ot">&lt;-</span> success <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">'Possible events = {possible_events}, </span><span class="sc">\n</span><span class="st">'</span>,</span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Dice value &gt; 7 = {success}, </span><span class="sc">\n</span><span class="st">'</span>,</span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>           <span class="st">'Probability = {success} / {possible_events} = {success / possible_events}'</span>)</span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>::: {exm-02-3}</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>The Yankees are playing the Red Sox. You’re a diehard Sox fan and bet your friend they’ll win the game. You’ll pay your friend \$30 if the Sox lose and your friend will have to pay you only \$5 if the Sox win. What is the probability you have intuitively assigned to the belief that the Red Sox will win?</span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>**Solution**:</span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>$$odds = \frac{30}{5} = 6$$</span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>Probability is calculated with @eq-p-odds: </span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>$$p = \frac{odds}{1 + odds} = $$  </span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>&lt;center&gt;$p = \frac{6}{1 + 6} = \frac{6}{7}$ = <span class="in">`r round(6/7, 2)`</span>&lt;/center&gt;</span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-
 
 
 

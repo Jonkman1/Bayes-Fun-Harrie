@@ -194,7 +194,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#experiments" id="toc-experiments" class="nav-link" data-scroll-target="#experiments">Experiments</a></li>
   </ul>
 </li>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
+  <li>
+<a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a>
+  <ul>
+<li><a href="#glossary-1" id="toc-glossary-1" class="nav-link" data-scroll-target="#glossary-1">Glossary</a></li>
+  </ul>
+</li>
   </ul>
 </li>
   </ul></nav>
@@ -285,28 +290,41 @@ Important
 </section></section><section id="glossary" class="level2"><h2 class="anchored" data-anchor-id="glossary">Glossary</h2>
 <p>I started a glossary using the {<a href="https://cran.r-project.org/web/packages/glossary/index.html"><strong>glossary</strong></a>} package by Lisa DeBruine <span class="citation" data-cites="glossary">(<a href="#ref-glossary" role="doc-biblioref"><strong>glossary?</strong></a>)</span>. A glossary entry is visualized with a double underline. Every chapter has a section where the text of all glossary entries of the chapter are displayed. When you hover with the mouse over the link it opens a pop-up window with the glossary text. You can see example in the section about my motivation for this ebook (See <a href="#sec-book-motivation" class="quarto-xref"><span>About My Motivation for this Quarto Book</span></a>).</p>
 <p>I am using this glossary for all my other Quarto books but it is till work in progress. Please keep in mind that I collected the definition at various places and be attentive because there is no guarantee that the entry is appropriate and correct. I have added the sources where I got the content for the glossary entry.</p>
-<div class="callout callout-style-default callout-note callout-titled" style="color: orange;">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="glossary-1" class="level3"><h3 class="anchored" data-anchor-id="glossary-1">Glossary</h3>
+<p>I am using the {<strong>glossary</strong>} package to create links to glossary entries. (See <span class="citation" data-cites="pak-glossary">(<a href="#ref-pak-glossary" role="doc-biblioref"><strong>pak-glossary?</strong></a>)</span>). <a href="https://cran.r-project.org/package=glossary">Glossaries for Markdown and Quarto Documents</a></p>
+<div class="my-r-code">
+<div class="my-r-code-header">
+<div id="cnj-load-glossary" class="theorem conjecture">
+<p><span class="theorem-title"><strong>Experiment 1</strong></span> : Load glossary</p>
 </div>
-<div class="callout-title-container flex-fill">
-Note
+</div>
+<div class="my-r-code-container">
+<div class="cell">
+<div id="lst-preface-load-glossary" class="r cell-code listing quarto-float">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-preface-load-glossary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;1: Install and load the glossary package with the appropriate glossary.yml file
+</figcaption><div aria-describedby="lst-preface-load-glossary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-preface-load-glossary"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## 1. Install the glossary package:</span></span>
+<span><span class="co">## https://debruine.github.io/glossary/</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/debruine/glossary">glossary</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## If you want to use my glossary.yml file:</span></span>
+<span></span>
+<span><span class="co">## 1. fork my repo</span></span>
+<span><span class="co">##    https://github.com/petzi53/glossary-pb</span></span>
+<span></span>
+<span><span class="co">## 2. Download the `glossary.yml` file from</span></span>
+<span><span class="co">##    https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)</span></span>
+<span></span>
+<span><span class="co">## 3. Store the file on your hard disk</span></span>
+<span><span class="co">##    and change the following path accordingly</span></span>
+<span></span>
+<span><span class="fu">glossary</span><span class="fu">::</span><span class="fu"><a href="https://debruine.github.io/glossary/reference/glossary_path.html">glossary_path</a></span><span class="op">(</span><span class="st">"/Volumes/T9/bayesian-fun/pb/glossary-pb/glossary-pb/glossary.yml"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</figure>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Load glossary</p>
-<ol type="1">
-<li>Install the package glossary https://debruine.github.io/glossary/</li>
-</ol>
-<p><code><a href="https://rdrr.io/r/base/library.html">library(glossary)</a></code></p>
-<p>If you want to see Baumgartner’s glossary:</p>
-<ol type="1">
-<li><p>fork his repository https://github.com/petzi53/glossary-pb</p></li>
-<li><p>Download the <code>glossary-pb</code> repository to your computer https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)</p></li>
-<li><p>Store the file on your hard disk and change the following path to your path</p></li>
-</ol>
-<p><code>glossary::glossary_path("../glossary.yml")</code></p>
 </div>
 </div>
 <p>::: ## Session Info</p>
@@ -329,7 +347,7 @@ Warning
 
 <!-- -->
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -980,45 +998,73 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>entry is appropriate and correct. I have added the sources where I got</span>
 <span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>the content for the glossary entry.</span>
 <span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>::: {.callout-note style="color: orange;"}</span>
-<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>Load glossary</span>
-<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Install the package glossary</span>
-<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>https://debruine.github.io/glossary/</span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="fu">### Glossary</span></span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>I am using the {**glossary**} package to create links to glossary</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>entries. (See @pak-glossary). <span class="co">[</span><span class="ot">Glossaries for Markdown and Quarto Documents</span><span class="co">](https://cran.r-project.org/package=glossary)</span></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a><span class="in">`library(glossary)`</span></span>
-<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>If you want to see Baumgartner's glossary:</span>
-<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>fork his repository</span>
-<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>https://github.com/petzi53/glossary-pb</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>::: my-r-code</span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>::: my-r-code-header</span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>::: {#cnj-load-glossary}</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>: Load glossary</span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Download the <span class="in">`glossary-pb`</span> repository to your computer</span>
-<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)</span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>::: my-r-code-container</span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Store the file on your hard disk and change the following path to your path</span>
-<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a><span class="in">`glossary::glossary_path("../glossary.yml")`</span></span>
-<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session Info</span></span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: load-glossary</span></span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a><span class="co">#| lst-label: lst-preface-load-glossary</span></span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a><span class="co">#| lst-cap: "Install and load the glossary package with the appropriate glossary.yml file"</span></span>
 <span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>Every chapter ends with a session information printed with the</span>
-<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="in">`sessionInfo()`</span> function.</span>
-<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
-<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a><span class="fu">###### Warning</span></span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="do">## 1. Install the glossary package:</span></span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a><span class="do">## https://debruine.github.io/glossary/</span></span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glossary)</span>
 <span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>I wrote this book as a text for others to read because that forces me to</span>
-<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>be become explicit and explain all my learning outcomes more carefully.</span>
-<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a>Please keep in mind that this text is not written by an expert but by a</span>
-<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a>learner. In spite of replicating most of the content it may contain many</span>
-<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>mistakes. All these misapprehensions and errors are my responsibility.</span>
-<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>In any case I am the only responsible person for this text, especially</span>
-<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>if I have used code from the resources wrongly or misunderstood a quoted</span>
-<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>text passage.</span>
-<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a><span class="do">## If you want to use my glossary.yml file:</span></span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a><span class="do">## 1. fork my repo</span></span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a><span class="do">##    https://github.com/petzi53/glossary-pb</span></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a><span class="do">## 2. Download the `glossary.yml` file from</span></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a><span class="do">##    https://github.com/petzi53/glossary-pb/blob/master/glossary.yml)</span></span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a><span class="do">## 3. Store the file on your hard disk</span></span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a><span class="do">##    and change the following path accordingly</span></span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>glossary<span class="sc">::</span><span class="fu">glossary_path</span>(<span class="st">"/Volumes/T9/bayesian-fun/pb/glossary-pb/glossary-pb/glossary.yml"</span>)</span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session Info</span></span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a>Every chapter ends with a session information printed with the</span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a><span class="in">`sessionInfo()`</span> function.</span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
+<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a><span class="fu">###### Warning</span></span>
+<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a>I wrote this book as a text for others to read because that forces me to</span>
+<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a>be become explicit and explain all my learning outcomes more carefully.</span>
+<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a>Please keep in mind that this text is not written by an expert but by a</span>
+<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a>learner. In spite of replicating most of the content it may contain many</span>
+<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a>mistakes. All these misapprehensions and errors are my responsibility.</span>
+<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a>In any case I am the only responsible person for this text, especially</span>
+<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a>if I have used code from the resources wrongly or misunderstood a quoted</span>
+<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a>text passage.</span>
+<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

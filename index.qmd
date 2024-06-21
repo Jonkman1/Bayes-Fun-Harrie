@@ -220,7 +220,8 @@ library(glossary)
 ## 3. Store the file on your hard disk
 ##    and change the following path accordingly
 
-glossary::glossary_path("glossary.yml")
+glossary::glossary_path("/Volumes/T9/bayesian-fun/pb/glossary-pb/glossary-pb/glossary.yml")
+
 
 ```
 

@@ -7,7 +7,8 @@ engine: knitr
 **Frequentist statistics** is founded on the idea that probability represents the frequency with which something happens.
 
 :::{.column-margin}
-Frequentist statistics is a branch of statistics that interprets probability as the long-run frequency of events in repeated trials, focusing on parameter estimation, hypothesis testing, and confidence intervals without incorporating prior beliefs
+**Frequentist statistics** also known as frequentist interference, is a type of statistical approach where conclusions are made based on the frequency of an event. This statistical approach determines the probability of a long-term experiment, meaning the experiment is repeated under the same set of conditions to obtain an outcome. In frequentist statistics the population parameters are fixed, but unknown, and the data observed in experiments are random. (<a href="https://deepai.org/machine-learning-glossary-and-terms/frequentist-statistics">deepai.org</a>)
+
 :::
 
 **Bayesian statistics** on the other hand, is concerned
@@ -15,5 +16,6 @@ with how probabilities represent how uncertain we are about a piece of
 information.
 
 :::{.column-margin}
-Bayesian statistics is a branch of statistics that interprets probability as a measure of belief or certainty, updating prior beliefs with new evidence using Bayes' theorem to provide a posterior probability distribution for parameters of interest.
+**Bayesian statistics** uses Bayesian reasoning is the formal process that we use to update our beliefs about the world once we’ve observed some data.
+Ba
 :::

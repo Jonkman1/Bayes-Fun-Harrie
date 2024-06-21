@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.553">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Bayesian Statistics the Fun Way. Een notitieboek - 4&nbsp; Creating a Binomial Probability Distribution</title>
 <style>
 code{white-space: pre-wrap;}
@@ -56,7 +53,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -74,8 +70,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -101,12 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -131,18 +121,13 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script>
-
-<link rel="stylesheet" href="quarto.css">
+</script><link rel="stylesheet" href="quarto.css">
 <link rel="stylesheet" href="glossary.css">
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -153,13 +138,9 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Bayesian Statistics the Fun Way. Een notitieboek</a> 
     </div>
@@ -171,7 +152,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
@@ -196,7 +177,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-measuring-uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Measuring Uncertainty</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -214,52 +195,52 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-beta-distribution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Beta Distribution</span></span></a>
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#structure-of-a-binomial-distribution" id="toc-structure-of-a-binomial-distribution" class="nav-link active" data-scroll-target="#structure-of-a-binomial-distribution"><span class="header-section-number">4.1</span> Structure of a Binomial Distribution</a></li>
+<li><a href="#structure-of-a-binomial-distribution" id="toc-structure-of-a-binomial-distribution" class="nav-link active" data-scroll-target="#structure-of-a-binomial-distribution"><span class="header-section-number">4.1</span> Structure of a Binomial Distribution</a></li>
   <li><a href="#understanding-and-abstracting-out-the-details-of-our-problem" id="toc-understanding-and-abstracting-out-the-details-of-our-problem" class="nav-link" data-scroll-target="#understanding-and-abstracting-out-the-details-of-our-problem"><span class="header-section-number">4.2</span> Understanding and Abstracting Out the Details of Our Problem</a></li>
-  <li><a href="#counting-our-outcomes-with-the-binomial-coefficient" id="toc-counting-our-outcomes-with-the-binomial-coefficient" class="nav-link" data-scroll-target="#counting-our-outcomes-with-the-binomial-coefficient"><span class="header-section-number">4.3</span> Counting Our Outcomes with the Binomial Coefficient</a>
+  <li>
+<a href="#counting-our-outcomes-with-the-binomial-coefficient" id="toc-counting-our-outcomes-with-the-binomial-coefficient" class="nav-link" data-scroll-target="#counting-our-outcomes-with-the-binomial-coefficient"><span class="header-section-number">4.3</span> Counting Our Outcomes with the Binomial Coefficient</a>
   <ul>
-  <li><a href="#combinatorics-advanced-counting-with-the-binomial-coefficient" id="toc-combinatorics-advanced-counting-with-the-binomial-coefficient" class="nav-link" data-scroll-target="#combinatorics-advanced-counting-with-the-binomial-coefficient"><span class="header-section-number">4.3.1</span> Combinatorics: Advanced Counting with the Binomial Coefficient</a></li>
+<li><a href="#combinatorics-advanced-counting-with-the-binomial-coefficient" id="toc-combinatorics-advanced-counting-with-the-binomial-coefficient" class="nav-link" data-scroll-target="#combinatorics-advanced-counting-with-the-binomial-coefficient"><span class="header-section-number">4.3.1</span> Combinatorics: Advanced Counting with the Binomial Coefficient</a></li>
   <li><a href="#calculating-the-probability-of-the-desired-outcome" id="toc-calculating-the-probability-of-the-desired-outcome" class="nav-link" data-scroll-target="#calculating-the-probability-of-the-desired-outcome"><span class="header-section-number">4.3.2</span> Calculating the Probability of the Desired Outcome</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#sec-gacha-games" id="toc-sec-gacha-games" class="nav-link" data-scroll-target="#sec-gacha-games"><span class="header-section-number">4.4</span> Example: Gacha Games</a></li>
   <li><a href="#wrapping-up" id="toc-wrapping-up" class="nav-link" data-scroll-target="#wrapping-up"><span class="header-section-number">4.5</span> Wrapping Up</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">4.6</span> Exercises</a>
+  <li>
+<a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">4.6</span> Exercises</a>
   <ul>
-  <li><a href="#exercise-4.1" id="toc-exercise-4.1" class="nav-link" data-scroll-target="#exercise-4.1"><span class="header-section-number">4.6.1</span> Exercise 4.1</a></li>
+<li><a href="#exercise-4.1" id="toc-exercise-4.1" class="nav-link" data-scroll-target="#exercise-4.1"><span class="header-section-number">4.6.1</span> Exercise 4.1</a></li>
   <li><a href="#exercise-4.2" id="toc-exercise-4.2" class="nav-link" data-scroll-target="#exercise-4.2"><span class="header-section-number">4.6.2</span> Exercise 4.2</a></li>
   <li><a href="#exercise-4.3" id="toc-exercise-4.3" class="nav-link" data-scroll-target="#exercise-4.3"><span class="header-section-number">4.6.3</span> Exercise 4.3</a></li>
   <li><a href="#exercise-4.4" id="toc-exercise-4.4" class="nav-link" data-scroll-target="#exercise-4.4"><span class="header-section-number">4.6.4</span> Exercise 4.4</a></li>
   <li><a href="#exercise-4.5" id="toc-exercise-4.5" class="nav-link" data-scroll-target="#exercise-4.5"><span class="header-section-number">4.6.5</span> Exercise 4.5</a></li>
-  </ul></li>
-  <li><a href="#experiments" id="toc-experiments" class="nav-link" data-scroll-target="#experiments"><span class="header-section-number">4.7</span> Experiments</a>
+  </ul>
+</li>
+  <li>
+<a href="#experiments" id="toc-experiments" class="nav-link" data-scroll-target="#experiments"><span class="header-section-number">4.7</span> Experiments</a>
   <ul>
-  <li><a href="#sec-example-4-1" id="toc-sec-example-4-1" class="nav-link" data-scroll-target="#sec-example-4-1"><span class="header-section-number">4.7.1</span> Permutation with R</a></li>
+<li><a href="#sec-example-4-1" id="toc-sec-example-4-1" class="nav-link" data-scroll-target="#sec-example-4-1"><span class="header-section-number">4.7.1</span> Permutation with R</a></li>
   <li><a href="#sec-example-4-2" id="toc-sec-example-4-2" class="nav-link" data-scroll-target="#sec-example-4-2"><span class="header-section-number">4.7.2</span> Compute binomial coefficient manually</a></li>
   <li><a href="#sec-example-4-3" id="toc-sec-example-4-3" class="nav-link" data-scroll-target="#sec-example-4-3"><span class="header-section-number">4.7.3</span> Compute density of the binomial distribution</a></li>
   <li><a href="#sec-10-coin-flips" id="toc-sec-10-coin-flips" class="nav-link" data-scroll-target="#sec-10-coin-flips"><span class="header-section-number">4.7.4</span> Replication of the Binomial Distribution of 10 Coin Flips</a></li>
   <li><a href="#sec-example-4-4" id="toc-sec-example-4-4" class="nav-link" data-scroll-target="#sec-example-4-4"><span class="header-section-number">4.7.5</span> Replication of the Binomial Distribution of 10 Dice Rolls</a></li>
-  </ul></li>
   </ul>
-</nav>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title"><span id="sec-prob-dist" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating a Binomial Probability Distribution</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -274,11 +255,8 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<section id="structure-of-a-binomial-distribution" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="structure-of-a-binomial-distribution"><span class="header-section-number">4.1</span> Structure of a Binomial Distribution</h2>
+</header><section id="structure-of-a-binomial-distribution" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="structure-of-a-binomial-distribution">
+<span class="header-section-number">4.1</span> Structure of a Binomial Distribution</h2>
 <p>A binomial distribution is used to calculate the probability of a certain number of successful outcomes, given a number of trials and the probability of the successful outcome. The “bi” in the term binomial refers to the two possible outcomes that we’re concerned with: an event happening and an event not happening. (If there are more than two outcomes, the distribution is called multinomial.)</p>
 <p>Examples for a binomial distribution are:</p>
 <ul>
@@ -290,17 +268,23 @@ window.Quarto = {
 <div id="def-binom-dist-param" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4.1 (Parameter for the binomial distribution)</strong></span> All binomial distributions involve three parameters:</p>
 <ul>
-<li><code>k</code> The number of outcomes we care about</li>
-<li><code>n</code> The total number of trials</li>
-<li><code>p</code> The probability of the event happening</li>
+<li>
+<code>k</code> The number of outcomes we care about</li>
+<li>
+<code>n</code> The total number of trials</li>
+<li>
+<code>p</code> The probability of the event happening</li>
 </ul>
 </div>
 <hr>
 <p>Calculating the probability of flipping two heads in three coin tosses:</p>
 <ul>
-<li><span class="math inline">\(k = 2\)</span>, the number of events we care about, in this case flipping a heads</li>
-<li><span class="math inline">\(n = 3\)</span>, the number times the coin is flipped</li>
-<li><span class="math inline">\(p = 1/2\)</span>, the probability of flipping a heads in a coin toss</li>
+<li>
+<span class="math inline">\(k = 2\)</span>, the number of events we care about, in this case flipping a heads</li>
+<li>
+<span class="math inline">\(n = 3\)</span>, the number times the coin is flipped</li>
+<li>
+<span class="math inline">\(p = 1/2\)</span>, the probability of flipping a heads in a coin toss</li>
 </ul>
 <hr>
 <div id="thm-binomial-distribution-shorthand-notation" class="theorem">
@@ -309,14 +293,16 @@ window.Quarto = {
 <hr>
 <p>For the example of two heads in three coin tosses, we would write <span class="math inline">\(B(2; 3, 1/2)\)</span>.</p>
 <ul>
-<li><code>B</code> stands for <em>binomial</em> distribution</li>
-<li><code>k</code> is separated from the other parameters by a semicolon. This is because when we are talking about a distribution of values, we usually care about all values of <span class="math inline">\(k\)</span> for a fixed <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span>.</li>
-<li><code>B(k; n, p)</code> denotes each value in the distribution</li>
-<li><code>B(n, p)</code> denotes the whole distribution</li>
-</ul>
-</section>
-<section id="understanding-and-abstracting-out-the-details-of-our-problem" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="understanding-and-abstracting-out-the-details-of-our-problem"><span class="header-section-number">4.2</span> Understanding and Abstracting Out the Details of Our Problem</h2>
+<li>
+<code>B</code> stands for <em>binomial</em> distribution</li>
+<li>
+<code>k</code> is separated from the other parameters by a semicolon. This is because when we are talking about a distribution of values, we usually care about all values of <span class="math inline">\(k\)</span> for a fixed <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span>.</li>
+<li>
+<code>B(k; n, p)</code> denotes each value in the distribution</li>
+<li>
+<code>B(n, p)</code> denotes the whole distribution</li>
+</ul></section><section id="understanding-and-abstracting-out-the-details-of-our-problem" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="understanding-and-abstracting-out-the-details-of-our-problem">
+<span class="header-section-number">4.2</span> Understanding and Abstracting Out the Details of Our Problem</h2>
 <p>We’ll continue with the example of calculating the probability of flipping two heads in three coin tosses. Since the number of possible outcomes is small, we can quickly figure out the results we care about with just pencil and paper.</p>
 <p><span class="math display">\[HHT, HTH, THH\]</span> To start generalizing, we’ll break this problem down into smaller pieces we can solve right now, and reduce those pieces into manageable equations. As we build up the equations, we’ll put them together to create a generalized function for the binomial distribution.</p>
 <hr>
@@ -353,13 +339,11 @@ P(\text{Desired Outcome}) + P(\text{Desired Outcome}) + P(\text{Desired Outcome}
 <ol type="1">
 <li>How to count the number of outcomes we care about?</li>
 <li>How to determine the probability for a single outcome?</li>
-</ol>
-</section>
-<section id="counting-our-outcomes-with-the-binomial-coefficient" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="counting-our-outcomes-with-the-binomial-coefficient"><span class="header-section-number">4.3</span> Counting Our Outcomes with the Binomial Coefficient</h2>
+</ol></section><section id="counting-our-outcomes-with-the-binomial-coefficient" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="counting-our-outcomes-with-the-binomial-coefficient">
+<span class="header-section-number">4.3</span> Counting Our Outcomes with the Binomial Coefficient</h2>
 <p>First we need to figure out how many outcomes there are for a given k (the outcomes we care about) and n (the number of trials). For small numbers we can simply count. But it doesn’t take much for this to become too difficult to do by hand. The solution is combinatorics (GLOSSARY))`.</p>
-<section id="combinatorics-advanced-counting-with-the-binomial-coefficient" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="combinatorics-advanced-counting-with-the-binomial-coefficient"><span class="header-section-number">4.3.1</span> Combinatorics: Advanced Counting with the Binomial Coefficient</h3>
+<section id="combinatorics-advanced-counting-with-the-binomial-coefficient" class="level3" data-number="4.3.1"><h3 data-number="4.3.1" class="anchored" data-anchor-id="combinatorics-advanced-counting-with-the-binomial-coefficient">
+<span class="header-section-number">4.3.1</span> Combinatorics: Advanced Counting with the Binomial Coefficient</h3>
 <p>There is a special operation in combinatorics, called the <em>binomial coefficient</em>, that represents counting the number of ways we can select <code>k</code> from <code>n</code> — that is, selecting the outcomes we care about from the total number of trials.</p>
 <hr>
 <div id="thm-binomial-coefficient" class="theorem">
@@ -378,12 +362,10 @@ P(\text{Desired Outcome}) + P(\text{Desired Outcome}) + P(\text{Desired Outcome}
 <hr>
 <div class="cell">
 <div id="lst-binomial-coeff" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-binomial-coeff-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-binomial-coeff-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.1: <strong>Compute the binomial coefficient for flipping two heads in three tosses</strong>
-</figcaption>
-<div aria-describedby="lst-binomial-coeff-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-binomial-coeff"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-binomial-coeff-1"><a href="#lst-binomial-coeff-1" aria-hidden="true" tabindex="-1"></a><span class="fu">choose</span>(<span class="dv">3</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-binomial-coeff-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-binomial-coeff"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="fl">3</span>,<span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -395,9 +377,8 @@ Listing&nbsp;4.1: <strong>Compute the binomial coefficient for flipping two head
 <p>See how to calculate the binomial coefficient with Base R in <a href="#sec-example-4-2" class="quarto-xref"><span>Section 4.7.2</span></a>.</p>
 <p>We can now replace <span class="math inline">\(N_{Outcomes}\)</span> in <a href="#eq-pmf-placeholder" class="quarto-xref">Equation&nbsp;<span>4.3</span></a> with the binomial coefficient:</p>
 <p><span class="math display">\[B(k;n,p) = \binom{n}{k} \times P(\text{Desired Outcome})\]</span></p>
-</section>
-<section id="calculating-the-probability-of-the-desired-outcome" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="calculating-the-probability-of-the-desired-outcome"><span class="header-section-number">4.3.2</span> Calculating the Probability of the Desired Outcome</h3>
+</section><section id="calculating-the-probability-of-the-desired-outcome" class="level3" data-number="4.3.2"><h3 data-number="4.3.2" class="anchored" data-anchor-id="calculating-the-probability-of-the-desired-outcome">
+<span class="header-section-number">4.3.2</span> Calculating the Probability of the Desired Outcome</h3>
 <p>All we have left to figure out is the <span class="math inline">\(P(\text{Desired Outcome})\)</span>, which is the probability of any of the possible events we care about. So far we’ve been using <span class="math inline">\(P(\text{Desired Outcome})\)</span> as a variable to help organize our solution to this problem, but now we need to figure out exactly how to calculate this value.</p>
 <p>Let’s focus on a single case of our example of tow heads in three tosses: <span class="math inline">\(HHT\)</span>. Using the product rule and negation from the previous chapter, we can describe this problem as: <span class="math display">\[P(heads, heads, no heads) = P(heads, heads, 1-heads)\]</span> Now we can use the product rule from <a href="03-logic-uncertainty.html#eq-product-rule" class="quarto-xref">Equation&nbsp;<span>3.1</span></a>:</p>
 <p><span class="math display">\[
@@ -411,9 +392,12 @@ P(heads)^2 \times (1-P(heads))^1
 \binom{n}{k} \times P(heads)^{k} \times (1- P(heads))^{n-k}
 \]</span> Generalizing for any probability, not just heads, we replace <span class="math inline">\(P(heads)\)</span> with just <code>p</code>. This gives us a <em>general solution</em>. Compare the following list with <a href="#def-binom-dist-param" class="quarto-xref">Definition&nbsp;<span>4.1</span></a>.</p>
 <ul>
-<li><code>k</code>, the number of outcomes we care about;</li>
-<li><code>n</code>, the number of trials; and</li>
-<li><code>p</code>, the probability of the individual outcome.</li>
+<li>
+<code>k</code>, the number of outcomes we care about;</li>
+<li>
+<code>n</code>, the number of trials; and</li>
+<li>
+<code>p</code>, the probability of the individual outcome.</li>
 </ul>
 <hr>
 <div id="thm-pmf" class="theorem">
@@ -430,12 +414,10 @@ B(12,24,\frac{1}{2}) = \binom{24}{12} \times (\frac{1}{2})^{12} \times (1-\frac{
 <hr>
 <div class="cell">
 <div id="lst-calc-example" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-calc-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-calc-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.2: <strong>Calculate the probability of flipping exactly 12 heads in 24 coin tosses</strong>
-</figcaption>
-<div aria-describedby="lst-calc-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-calc-example"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-calc-example-1"><a href="#lst-calc-example-1" aria-hidden="true" tabindex="-1"></a><span class="fu">choose</span>(<span class="dv">24</span>,<span class="dv">12</span>) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">/</span> <span class="dv">2</span>)<span class="sc">^</span>(<span class="dv">12</span>) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">^</span>(<span class="dv">24</span> <span class="sc">-</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-calc-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-calc-example"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="fl">24</span>,<span class="fl">12</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span><span class="op">^</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="fl">1</span><span class="op">/</span><span class="fl">2</span><span class="op">)</span><span class="op">^</span><span class="op">(</span><span class="fl">24</span> <span class="op">-</span> <span class="fl">12</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -447,11 +429,9 @@ Listing&nbsp;4.2: <strong>Calculate the probability of flipping exactly 12 heads
 <p>The calculation in <a href="#lst-calc-example" class="quarto-xref">Listing&nbsp;<span>4.2</span></a> is only valid for our concrete example.</p>
 <p>For example, we can plug in all the possible values for <code>k</code> in 10 coin tosses into our PMF and visualize what the binomial distribution looks like for all possible values.</p>
 <div id="fig-10-coin-flips" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" alt="Bar graph showing the probability of getting k in 10 coin flips">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.1: Binomial Distribution for 10 Coin Flips
-</figcaption>
-<div aria-describedby="fig-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption><div aria-describedby="fig-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/04fig01.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Bar graph showing the probability of getting k in 10 coin flips">
 </div>
 </figure>
@@ -459,32 +439,26 @@ Figure&nbsp;4.1: Binomial Distribution for 10 Coin Flips
 <p>See my <a href="#fig-repl-10-coin-flips" class="quarto-xref">Figure&nbsp;<span>4.4</span></a> as a replication of <a href="#fig-10-coin-flips" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>.</p>
 <p>We can also look at the same distribution for the probability of getting a 6 when rolling a six-sided die 10 times, as shown in <a href="#fig-10-dice-rolls" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>.</p>
 <div id="fig-10-dice-rolls" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" alt="Bar graph showing the probability of getting a 6 when rolling a six-sided die 10 times">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-10-dice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-10-dice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.2: Binomial Distribution for 10 Coin Flips
-</figcaption>
-<div aria-describedby="fig-10-dice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption><div aria-describedby="fig-10-dice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/04fig02.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Bar graph showing the probability of getting a 6 when rolling a six-sided die 10 times">
 </div>
 </figure>
 </div>
 <p>Again I replicated <a href="#fig-10-dice-rolls" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> with my <a href="#fig-repl-10-dice-rolls" class="quarto-xref">Figure&nbsp;<span>4.6</span></a>.</p>
 <p>Bottom line of the discussion in this section: A probability distribution is a way of generalizing an entire class of problems.</p>
-</section>
-</section>
-<section id="sec-gacha-games" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="sec-gacha-games"><span class="header-section-number">4.4</span> Example: Gacha Games</h2>
+</section></section><section id="sec-gacha-games" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="sec-gacha-games">
+<span class="header-section-number">4.4</span> Example: Gacha Games</h2>
 <p>There is only one new content in this section: Instead of computing the probability of one event we are going to calculate the possibility of drawing <em>at least</em> one specific card from a pile of infinite numbers of cards where we know the probability of this card we are interested. The aim is to have a <code>p</code> of at last 50% with 100 trials and a probability of 0.720% for the card we are interested.</p>
 <p>At first let us compute the probability for getting <em>exactly one card</em> we are interested with 100 draws form the pile. We know the probability to draw the featured card is 0.720%.</p>
 <p><span class="math display">\[\binom{100}{1} \times 0.00720^{1} \times (1- 0.00720)^{100-1}\]</span></p>
 <div class="cell">
 <div id="lst-draw-exact-one-card" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-draw-exact-one-card-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-draw-exact-one-card-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.3: Draw exact one card that has p = 0.720%
-</figcaption>
-<div aria-describedby="lst-draw-exact-one-card-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-draw-exact-one-card"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-draw-exact-one-card-1"><a href="#lst-draw-exact-one-card-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="fl">0.00720</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-draw-exact-one-card-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-draw-exact-one-card"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">dbinom</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">100</span>, <span class="fl">0.00720</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -493,26 +467,22 @@ Listing&nbsp;4.3: Draw exact one card that has p = 0.720%
 </div>
 </div>
 <p>And now let’s compute the probability for <em>at least one card</em> we are interested.</p>
-<p>In R, we can use the Binomial Cumulative Distribution Function <code>pbinom()</code> to automatically sum up all the values of the card we are interested in our PMF.</p>
+<p>In R, we can use the Binomial Cumulative Distribution Function <code><a href="https://rdrr.io/r/stats/Binomial.html">pbinom()</a></code> to automatically sum up all the values of the card we are interested in our PMF.</p>
 <div id="fig-pbinom-function" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" alt="Explaining the structure of the pbinom() function">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-pbinom-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-pbinom-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.3: How the pbinom() function works
-</figcaption>
-<div aria-describedby="fig-pbinom-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption><div aria-describedby="fig-pbinom-function-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/04fig03.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Explaining the structure of the pbinom() function">
 </div>
 </figure>
 </div>
-<p>The <code>pbinom()</code> function takes three required arguments and an optional fourth called <code>lower.tail</code> (which defaults to TRUE). When the fourth argument is TRUE, the first argument sums up all of the probabilities less than or equal to our argument. When <code>lower.tail</code> is set to FALSE, it sums up the probabilities strictly greater than the first argument. By setting the first argument to <span class="math inline">\(0\)</span>, we are looking at the probability of getting one or more the cards we are interested. We set <code>lower.tail</code> to FALSE because that means we want values greater than the first argument (by default, we get values less than the first argument).</p>
+<p>The <code><a href="https://rdrr.io/r/stats/Binomial.html">pbinom()</a></code> function takes three required arguments and an optional fourth called <code>lower.tail</code> (which defaults to TRUE). When the fourth argument is TRUE, the first argument sums up all of the probabilities less than or equal to our argument. When <code>lower.tail</code> is set to FALSE, it sums up the probabilities strictly greater than the first argument. By setting the first argument to <span class="math inline">\(0\)</span>, we are looking at the probability of getting one or more the cards we are interested. We set <code>lower.tail</code> to FALSE because that means we want values greater than the first argument (by default, we get values less than the first argument).</p>
 <div class="cell">
 <div id="lst-use-pbinom-example" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-use-pbinom-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-use-pbinom-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.4: Example Calculation with the pbinom() Function
-</figcaption>
-<div aria-describedby="lst-use-pbinom-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-use-pbinom-example"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-use-pbinom-example-1"><a href="#lst-use-pbinom-example-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="fl">0.00720</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-use-pbinom-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-use-pbinom-example"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">pbinom</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">100</span>, <span class="fl">0.00720</span>, lower.tail <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -521,9 +491,8 @@ Listing&nbsp;4.4: Example Calculation with the pbinom() Function
 </div>
 </div>
 <p>Voilá! This is the same result as in @#fig-pbinom-function.</p>
-</section>
-<section id="wrapping-up" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="wrapping-up"><span class="header-section-number">4.5</span> Wrapping Up</h2>
+</section><section id="wrapping-up" class="level2" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="wrapping-up">
+<span class="header-section-number">4.5</span> Wrapping Up</h2>
 <p>In this chapter Will Kurt demonstrated how we can deduce intuitively the formula for the binomial coefficient (GLOSSARY).</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -538,27 +507,25 @@ Note
 <p>I have seen this monstrosity of expression for the binomial coefficient many times in different books and was always overwhelmed from its complexity. But this has changed now: Will Kurt succeeded to demystify the formula for me!</p>
 </div>
 </div>
-</section>
-<section id="exercises" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="exercises"><span class="header-section-number">4.6</span> Exercises</h2>
+</section><section id="exercises" class="level2" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="exercises">
+<span class="header-section-number">4.6</span> Exercises</h2>
 <p>Try answering the following questions to make sure you’ve grasped binomial distributions fully. The solutions can be found at https://nostarch.com/learnbayes/.</p>
-<section id="exercise-4.1" class="level3" data-number="4.6.1">
-<h3 data-number="4.6.1" class="anchored" data-anchor-id="exercise-4.1"><span class="header-section-number">4.6.1</span> Exercise 4.1</h3>
+<section id="exercise-4.1" class="level3" data-number="4.6.1"><h3 data-number="4.6.1" class="anchored" data-anchor-id="exercise-4.1">
+<span class="header-section-number">4.6.1</span> Exercise 4.1</h3>
 <div id="exr-04-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4.1</strong></span> What are the parameters of the binomial distribution for the probability of rolling either a 1 or a 20 on a 20-sided die, if we roll the die 12 times?</p>
 <ul>
 <li>k = interested events: 1 and 20 = 2.</li>
 <li>n = number of trials = 12</li>
-<li>p = probability for each trial = <span class="math inline">\(\frac{2}{12}\)</span></li>
+<li>p = probability for each trial = <span class="math inline">\(\frac{2}{12}\)</span>
+</li>
 </ul>
 <div class="cell">
 <div id="lst-exercise-04-1" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.5: <strong>Binomial distribution for the probability of rolling either a 1 or a 20 on a 20-sided die, if we roll the die 12 times</strong>
-</figcaption>
-<div aria-describedby="lst-exercise-04-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-exercise-04-1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-exercise-04-1-1"><a href="#lst-exercise-04-1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="dv">2</span>, <span class="dv">12</span>, <span class="dv">2</span><span class="sc">/</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-exercise-04-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-exercise-04-1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">dbinom</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">12</span>, <span class="fl">2</span><span class="op">/</span><span class="fl">20</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -567,20 +534,16 @@ Listing&nbsp;4.5: <strong>Binomial distribution for the probability of rolling e
 </div>
 </div>
 </div>
-<hr>
-</section>
-<section id="exercise-4.2" class="level3" data-number="4.6.2">
-<h3 data-number="4.6.2" class="anchored" data-anchor-id="exercise-4.2"><span class="header-section-number">4.6.2</span> Exercise 4.2</h3>
+<hr></section><section id="exercise-4.2" class="level3" data-number="4.6.2"><h3 data-number="4.6.2" class="anchored" data-anchor-id="exercise-4.2">
+<span class="header-section-number">4.6.2</span> Exercise 4.2</h3>
 <div id="exr-04-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4.2</strong></span> There are four aces in a deck of 52 cards. If you pull a card, return the card, then reshuffle and pull a card again, how many ways can you pull just one ace in five pulls?</p>
 <div class="cell">
 <div id="lst-exercise-04-2" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.6: <strong>If you pull a card, return the card, then reshuffle and pull a card again, how many ways can you pull just one ace in five pulls?</strong>
-</figcaption>
-<div aria-describedby="lst-exercise-04-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-exercise-04-2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-exercise-04-2-1"><a href="#lst-exercise-04-2-1" aria-hidden="true" tabindex="-1"></a>combinat<span class="sc">::</span><span class="fu">combn</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">m =</span> <span class="dv">1</span>, <span class="at">fun =</span> tabulate, <span class="at">simplify =</span> <span class="cn">TRUE</span>, <span class="at">nbins =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-exercise-04-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-exercise-04-2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">combinat</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/combinat/man/combn.html">combn</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, m <span class="op">=</span> <span class="fl">1</span>, fun <span class="op">=</span> <span class="va">tabulate</span>, simplify <span class="op">=</span> <span class="cn">TRUE</span>, nbins <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -593,12 +556,10 @@ Listing&nbsp;4.6: <strong>If you pull a card, return the card, then reshuffle an
 [5,]    0    0    0    0    1</code></pre>
 </div>
 <div id="lst-exercise-04-2" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.7: <strong>If you pull a card, return the card, then reshuffle and pull a card again, how many ways can you pull just one ace in five pulls?</strong>
-</figcaption>
-<div aria-describedby="lst-exercise-04-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-exercise-04-2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-exercise-04-2-1"><a href="#lst-exercise-04-2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">choose</span>(<span class="dv">5</span>,<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-exercise-04-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-exercise-04-2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -616,24 +577,20 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In contrast to the result in the solution manual I programmed the exercise with <code>combinat::combn()</code>. This correct solution pretends that I could use it for every possible arrangement. That is not true. For instance I could not manage to display the many ways of rolling two 6s in three rolls of a six-sided die.</p>
+<p>In contrast to the result in the solution manual I programmed the exercise with <code><a href="https://rdrr.io/pkg/combinat/man/combn.html">combinat::combn()</a></code>. This correct solution pretends that I could use it for every possible arrangement. That is not true. For instance I could not manage to display the many ways of rolling two 6s in three rolls of a six-sided die.</p>
 </div>
 </div>
 </div>
-<hr>
-</section>
-<section id="exercise-4.3" class="level3" data-number="4.6.3">
-<h3 data-number="4.6.3" class="anchored" data-anchor-id="exercise-4.3"><span class="header-section-number">4.6.3</span> Exercise 4.3</h3>
+<hr></section><section id="exercise-4.3" class="level3" data-number="4.6.3"><h3 data-number="4.6.3" class="anchored" data-anchor-id="exercise-4.3">
+<span class="header-section-number">4.6.3</span> Exercise 4.3</h3>
 <div id="exr-04-3" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4.3</strong></span> For the example in <a href="#exr-04-2" class="quarto-xref">Exercise&nbsp;<span>4.2</span></a>, what is the probability of pulling five aces in 10 pulls (remember the card is shuffled back in the deck when it is pulled)?</p>
 <div class="cell">
 <div id="lst-exercise-04-3" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.8: <strong>Probability of pulling five aces in 10 pulls with replacing</strong>
-</figcaption>
-<div aria-describedby="lst-exercise-04-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-exercise-04-3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-exercise-04-3-1"><a href="#lst-exercise-04-3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">4</span> <span class="sc">/</span> <span class="dv">52</span>) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-exercise-04-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-exercise-04-3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">dbinom</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">10</span>, <span class="fl">4</span> <span class="op">/</span> <span class="fl">52</span><span class="op">)</span> <span class="op">*</span> <span class="fl">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -655,20 +612,16 @@ Warning
 </div>
 </div>
 </div>
-<hr>
-</section>
-<section id="exercise-4.4" class="level3" data-number="4.6.4">
-<h3 data-number="4.6.4" class="anchored" data-anchor-id="exercise-4.4"><span class="header-section-number">4.6.4</span> Exercise 4.4</h3>
+<hr></section><section id="exercise-4.4" class="level3" data-number="4.6.4"><h3 data-number="4.6.4" class="anchored" data-anchor-id="exercise-4.4">
+<span class="header-section-number">4.6.4</span> Exercise 4.4</h3>
 <div id="exr-04-4" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4.4</strong></span> When you’re searching for a new job, it’s always helpful to have more than one offer on the table so you can use it in negotiations. If you have a 1/5 probability of receiving a job offer when you interview, and you interview with seven companies in a month, what is the probability you’ll have at least two competing offers by the end of that month?</p>
 <div class="cell">
 <div id="lst-exercise-04-4" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.9: <strong>Probability of at least 2 interviews each with 1/5 chance for a job offer having 7 interviews</strong>
-</figcaption>
-<div aria-describedby="lst-exercise-04-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-exercise-04-4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-exercise-04-4-1"><a href="#lst-exercise-04-4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-exercise-04-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-exercise-04-4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">pbinom</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">7</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">5</span>, lower.tail <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -691,20 +644,16 @@ Note
 </div>
 </div>
 </div>
-<hr>
-</section>
-<section id="exercise-4.5" class="level3" data-number="4.6.5">
-<h3 data-number="4.6.5" class="anchored" data-anchor-id="exercise-4.5"><span class="header-section-number">4.6.5</span> Exercise 4.5</h3>
+<hr></section><section id="exercise-4.5" class="level3" data-number="4.6.5"><h3 data-number="4.6.5" class="anchored" data-anchor-id="exercise-4.5">
+<span class="header-section-number">4.6.5</span> Exercise 4.5</h3>
 <div id="exr-04-5" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4.5</strong></span> You get a bunch of recruiter emails and find out you have 25 interviews lined up in the next month. Unfortunately, you know this will leave you exhausted, and the probability of getting an offer will drop to 1/10 if you’re tired. You really don’t want to go on this many interviews unless you are at least twice as likely to get at least two competing offers. Are you more likely to get at least two offers if you go for 25 interviews, or stick to just 7?</p>
 <div class="cell">
 <div id="lst-exercise-04-5" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-exercise-04-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.10: <strong>Probability of at least 2 interviews each with 1/10 chance for a job offer having 25 interviews</strong>
-</figcaption>
-<div aria-describedby="lst-exercise-04-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-exercise-04-5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-exercise-04-5-1"><a href="#lst-exercise-04-5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pbinom</span>(<span class="dv">1</span>, <span class="dv">25</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">10</span>, <span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-exercise-04-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-exercise-04-5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">pbinom</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">25</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">10</span>, lower.tail <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -714,23 +663,18 @@ Listing&nbsp;4.10: <strong>Probability of at least 2 interviews each with 1/10 c
 </div>
 <p>With a reduced probability per interview you raised your changes from 42,3% to 72,9%. But to get an job offer is not twice as likely so you stick with 7 interviews.</p>
 </div>
-<hr>
-</section>
-</section>
-<section id="experiments" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="experiments"><span class="header-section-number">4.7</span> Experiments</h2>
-<section id="sec-example-4-1" class="level3" data-number="4.7.1">
-<h3 data-number="4.7.1" class="anchored" data-anchor-id="sec-example-4-1"><span class="header-section-number">4.7.1</span> Permutation with R</h3>
+<hr></section></section><section id="experiments" class="level2" data-number="4.7"><h2 data-number="4.7" class="anchored" data-anchor-id="experiments">
+<span class="header-section-number">4.7</span> Experiments</h2>
+<section id="sec-example-4-1" class="level3" data-number="4.7.1"><h3 data-number="4.7.1" class="anchored" data-anchor-id="sec-example-4-1">
+<span class="header-section-number">4.7.1</span> Permutation with R</h3>
 <p>I want to get the same result as in <a href="#eq-permutation-example" class="quarto-xref">Equation&nbsp;<span>4.2</span></a>, but this time using R. What are the permutations of possible events by flipping two heads in three coin tosses?</p>
-<p>Let’s P(heads) = 1 and P(tails) = 0, then we can use <code>combinat::combn()</code>. The package {<strong>combinat</strong>} is not part of Base R, so you have to install it.</p>
+<p>Let’s P(heads) = 1 and P(tails) = 0, then we can use <code><a href="https://rdrr.io/pkg/combinat/man/combn.html">combinat::combn()</a></code>. The package {<strong>combinat</strong>} is not part of Base R, so you have to install it.</p>
 <div class="cell">
 <div id="lst-permutate-3-2" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-permutate-3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-permutate-3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.11: Permutations of possible events by flipping two heads in three coin tosses
-</figcaption>
-<div aria-describedby="lst-permutate-3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-permutate-3-2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-permutate-3-2-1"><a href="#lst-permutate-3-2-1" aria-hidden="true" tabindex="-1"></a>combinat<span class="sc">::</span><span class="fu">combn</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">m =</span> <span class="dv">2</span>, <span class="at">fun =</span> tabulate, <span class="at">simplify =</span> <span class="cn">TRUE</span>, <span class="at">nbins =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-permutate-3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-permutate-3-2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">combinat</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/combinat/man/combn.html">combn</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span>, m <span class="op">=</span> <span class="fl">2</span>, fun <span class="op">=</span> <span class="va">tabulate</span>, simplify <span class="op">=</span> <span class="cn">TRUE</span>, nbins <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -743,21 +687,24 @@ Listing&nbsp;4.11: Permutations of possible events by flipping two heads in thre
 </div>
 <p>The syntax is: <code>combn(x, m, fun = NULL, simplify = TRUE, ...)</code>.</p>
 <ul>
-<li><code>x</code>: vector source for combinations equivalent to the the number of events.</li>
-<li><code>m</code>: number of elements we are interested in</li>
-<li><code>fun</code> = function to be applied to each combination (may be null). I am using the <code>base::tabulate()</code> to take the integer-valued vector and counting the number of times each integer occurs in it.</li>
-<li><code>simplify</code>: logical, if FALSE, returns a list, otherwise returns vector or array.</li>
-<li><code>...</code>: arguments for the used function. In our case <code>nbins</code> refers to the number of bin used by the <code>tabulate()</code> function.</li>
+<li>
+<code>x</code>: vector source for combinations equivalent to the the number of events.</li>
+<li>
+<code>m</code>: number of elements we are interested in</li>
+<li>
+<code>fun</code> = function to be applied to each combination (may be null). I am using the <code><a href="https://rdrr.io/r/base/tabulate.html">base::tabulate()</a></code> to take the integer-valued vector and counting the number of times each integer occurs in it.</li>
+<li>
+<code>simplify</code>: logical, if FALSE, returns a list, otherwise returns vector or array.</li>
+<li>
+<code>...</code>: arguments for the used function. In our case <code>nbins</code> refers to the number of bin used by the <code><a href="https://rdrr.io/r/base/tabulate.html">tabulate()</a></code> function.</li>
 </ul>
-<p>Let’s try another example to understand better the pattern of the <code>combn()</code> functions: What are the permutations of possible events by flipping a coin 5 times and getting three heads:</p>
+<p>Let’s try another example to understand better the pattern of the <code><a href="https://rdrr.io/r/utils/combn.html">combn()</a></code> functions: What are the permutations of possible events by flipping a coin 5 times and getting three heads:</p>
 <div class="cell">
 <div id="lst-permutate-3-2" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-permutate-3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-permutate-3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.12: Permutations of possible events by flipping two heads in five coin tosses
-</figcaption>
-<div aria-describedby="lst-permutate-3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-permutate-3-2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-permutate-3-2-1"><a href="#lst-permutate-3-2-1" aria-hidden="true" tabindex="-1"></a>combinat<span class="sc">::</span><span class="fu">combn</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">m =</span> <span class="dv">2</span>, <span class="at">fun =</span> tabulate, <span class="at">simplify =</span> <span class="cn">TRUE</span>, <span class="at">nbins =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-permutate-3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-permutate-3-2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">combinat</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/combinat/man/combn.html">combn</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, m <span class="op">=</span> <span class="fl">2</span>, fun <span class="op">=</span> <span class="va">tabulate</span>, simplify <span class="op">=</span> <span class="cn">TRUE</span>, nbins <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -783,15 +730,13 @@ Tip
 <p>There is also a special package {<strong>dice</strong>} for the calculation of various dice-rolling events. We could for instance compute the probability “What is the probability of rolling two 6s in three rolls of a six-sided die?” directly with:</p>
 <div class="cell">
 <div id="lst-package-dice-example" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-package-dice-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-package-dice-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.13: Compute the probability of rolling two 6s in three rolls of a six-sided die
-</figcaption>
-<div aria-describedby="lst-package-dice-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-package-dice-example"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-package-dice-example-1"><a href="#lst-package-dice-example-1" aria-hidden="true" tabindex="-1"></a>dice<span class="sc">::</span><span class="fu">getEventProb</span>(<span class="at">nrolls =</span> <span class="dv">3</span>,</span>
-<span id="lst-package-dice-example-2"><a href="#lst-package-dice-example-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">ndicePerRoll =</span> <span class="dv">2</span>,</span>
-<span id="lst-package-dice-example-3"><a href="#lst-package-dice-example-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">nsidesPerDie =</span> <span class="dv">6</span>,</span>
-<span id="lst-package-dice-example-4"><a href="#lst-package-dice-example-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">eventList =</span> <span class="fu">list</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-package-dice-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-package-dice-example"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dice</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/dice/man/getEventProb.html">getEventProb</a></span><span class="op">(</span>nrolls <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>                   ndicePerRoll <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                   nsidesPerDie <span class="op">=</span> <span class="fl">6</span>,</span>
+<span>                   eventList <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">6</span>, <span class="fl">6</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -813,34 +758,37 @@ Warning
 <div class="callout-body-container callout-body">
 <p>Actually I did not understand the many implications of computing combinations and / or permutations with different functions and different packages:</p>
 <ul>
-<li><code>utils::combn()</code></li>
-<li><code>combinat::combn()</code></li>
-<li><code>gtools::combinations()</code> and <code>gtools::permutations()</code></li>
-<li><code>permute::permute()</code>, <code>permute::shuffle()</code></li>
-<li><code>base::expand.grid()</code></li>
-<li><code>tidyr::expand()</code>, <code>tidyr::crossing()</code>, <code>tidyr::nesting()</code>, <code>tidyr::expand_grid()</code></li>
+<li><code><a href="https://rdrr.io/r/utils/combn.html">utils::combn()</a></code></li>
+<li><code><a href="https://rdrr.io/pkg/combinat/man/combn.html">combinat::combn()</a></code></li>
+<li>
+<code><a href="https://rdrr.io/pkg/gtools/man/combinations.html">gtools::combinations()</a></code> and <code><a href="https://rdrr.io/pkg/gtools/man/combinations.html">gtools::permutations()</a></code>
+</li>
+<li>
+<code>permute::permute()</code>, <code>permute::shuffle()</code>
+</li>
+<li><code><a href="https://rdrr.io/r/base/expand.grid.html">base::expand.grid()</a></code></li>
+<li>
+<code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::expand()</a></code>, <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing()</a></code>, <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::nesting()</a></code>, <code><a href="https://tidyr.tidyverse.org/reference/expand_grid.html">tidyr::expand_grid()</a></code>
+</li>
 </ul>
 <p>As far as I understand from my study of the Statistical Rethinking book, these functions are an important topic to understand Bayesian Statistics. These types of functions are used for grid approximation and in Bayesian statistics to extract or draw samples from fit models (e.g., <code>rethinking::extract.samples()</code>, <code>rethinking::extract.prior()</code>)</p>
 <p>I am sure I will need to come back to this issue and study available material more in detail! But at the moment I am stuck and will skip this subject.</p>
 </div>
 </div>
-</section>
-<section id="sec-example-4-2" class="level3" data-number="4.7.2">
-<h3 data-number="4.7.2" class="anchored" data-anchor-id="sec-example-4-2"><span class="header-section-number">4.7.2</span> Compute binomial coefficient manually</h3>
-<p>I want to replicate the Base R function <code>chosse()</code> with <a href="#eq-def-bin-coeff" class="quarto-xref">Equation&nbsp;<span>4.5</span></a>. This involves to calculate factorials with the <code>base::factorial()</code> function.</p>
+</section><section id="sec-example-4-2" class="level3" data-number="4.7.2"><h3 data-number="4.7.2" class="anchored" data-anchor-id="sec-example-4-2">
+<span class="header-section-number">4.7.2</span> Compute binomial coefficient manually</h3>
+<p>I want to replicate the Base R function <code>chosse()</code> with <a href="#eq-def-bin-coeff" class="quarto-xref">Equation&nbsp;<span>4.5</span></a>. This involves to calculate factorials with the <code><a href="https://rdrr.io/r/base/Special.html">base::factorial()</a></code> function.</p>
 <p><span class="math display">\[\binom{n}{k} = \frac{n!}{k! \times (n-k)!}\]</span></p>
 <div class="cell">
 <div id="lst-binomial-coeff-example" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-binomial-coeff-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-binomial-coeff-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.14: <strong>Calculate the probability of flipping exactly 12 heads in 24 coin tosses</strong>
-</figcaption>
-<div aria-describedby="lst-binomial-coeff-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-binomial-coeff-example"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-binomial-coeff-example-1"><a href="#lst-binomial-coeff-example-1" aria-hidden="true" tabindex="-1"></a>my_choose <span class="ot">&lt;-</span>  <span class="cf">function</span>(n, k) {</span>
-<span id="lst-binomial-coeff-example-2"><a href="#lst-binomial-coeff-example-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">factorial</span>(n) <span class="sc">/</span> (<span class="fu">factorial</span>(k) <span class="sc">*</span> <span class="fu">factorial</span>(n <span class="sc">-</span> k))</span>
-<span id="lst-binomial-coeff-example-3"><a href="#lst-binomial-coeff-example-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="lst-binomial-coeff-example-4"><a href="#lst-binomial-coeff-example-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="lst-binomial-coeff-example-5"><a href="#lst-binomial-coeff-example-5" aria-hidden="true" tabindex="-1"></a><span class="fu">choose</span>(<span class="dv">24</span>, <span class="dv">12</span>) <span class="sc">==</span> <span class="fu">my_choose</span>(<span class="dv">24</span>, <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-binomial-coeff-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-binomial-coeff-example"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_choose</span> <span class="op">&lt;-</span>  <span class="kw">function</span><span class="op">(</span><span class="va">n</span>, <span class="va">k</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/Special.html">factorial</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Special.html">factorial</a></span><span class="op">(</span><span class="va">k</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Special.html">factorial</a></span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="va">k</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="fl">24</span>, <span class="fl">12</span><span class="op">)</span> <span class="op">==</span> <span class="fu">my_choose</span><span class="op">(</span><span class="fl">24</span>, <span class="fl">12</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -852,23 +800,19 @@ Listing&nbsp;4.14: <strong>Calculate the probability of flipping exactly 12 head
 <ul>
 <li>With Base R function <code>choose(24, 12)</code> = 2.704156^{6}.</li>
 <li>With my own function <code>my_choose(24, 12)</code> = 2.704156^{6}.</li>
-</ul>
-</section>
-<section id="sec-example-4-3" class="level3" data-number="4.7.3">
-<h3 data-number="4.7.3" class="anchored" data-anchor-id="sec-example-4-3"><span class="header-section-number">4.7.3</span> Compute density of the binomial distribution</h3>
+</ul></section><section id="sec-example-4-3" class="level3" data-number="4.7.3"><h3 data-number="4.7.3" class="anchored" data-anchor-id="sec-example-4-3">
+<span class="header-section-number">4.7.3</span> Compute density of the binomial distribution</h3>
 <p>To generalize I write my own function for the density of the binomial distribution. I will use the same arguments names as in <a href="#def-binom-dist-param" class="quarto-xref">Definition&nbsp;<span>4.1</span></a>.</p>
 <div class="cell">
 <div id="lst-my-dbinom-func" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-my-dbinom-func-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-my-dbinom-func-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.15: <strong>Function for the density of the binomial distribution</strong>
-</figcaption>
-<div aria-describedby="lst-my-dbinom-func-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-my-dbinom-func"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-my-dbinom-func-1"><a href="#lst-my-dbinom-func-1" aria-hidden="true" tabindex="-1"></a>my_dbinom <span class="ot">&lt;-</span> <span class="cf">function</span>(k, n, p) {</span>
-<span id="lst-my-dbinom-func-2"><a href="#lst-my-dbinom-func-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">choose</span>(n, k) <span class="sc">*</span> p<span class="sc">^</span>k <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p)<span class="sc">^</span>(n <span class="sc">-</span> k)</span>
-<span id="lst-my-dbinom-func-3"><a href="#lst-my-dbinom-func-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="lst-my-dbinom-func-4"><a href="#lst-my-dbinom-func-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="lst-my-dbinom-func-5"><a href="#lst-my-dbinom-func-5" aria-hidden="true" tabindex="-1"></a><span class="fu">my_dbinom</span>(<span class="dv">12</span>, <span class="dv">24</span>, <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-my-dbinom-func-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-my-dbinom-func"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_dbinom</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">k</span>, <span class="va">n</span>, <span class="va">p</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="va">n</span>, <span class="va">k</span><span class="op">)</span> <span class="op">*</span> <span class="va">p</span><span class="op">^</span><span class="va">k</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">p</span><span class="op">)</span><span class="op">^</span><span class="op">(</span><span class="va">n</span> <span class="op">-</span> <span class="va">k</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="fu">my_dbinom</span><span class="op">(</span><span class="fl">12</span>, <span class="fl">24</span>, <span class="fl">0.5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -877,15 +821,13 @@ Listing&nbsp;4.15: <strong>Function for the density of the binomial distribution
 </div>
 </div>
 <p>Voilá: It gives the same result as the manual calculation in <a href="#lst-calc-example" class="quarto-xref">Listing&nbsp;<span>4.2</span></a>.</p>
-<p>I wonder if there is not a Base R function which does the same as <code>my_dbinom()</code>. I tried <code>stats::dbinom()</code> and it worked!</p>
+<p>I wonder if there is not a Base R function which does the same as <code>my_dbinom()</code>. I tried <code><a href="https://rdrr.io/r/stats/Binomial.html">stats::dbinom()</a></code> and it worked!</p>
 <div class="cell">
 <div id="lst-dbinom-func" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-dbinom-func-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-dbinom-func-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.16: <strong>Base R dbinom() function calculates the density of the binomial distribution</strong>
-</figcaption>
-<div aria-describedby="lst-dbinom-func-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-dbinom-func"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-dbinom-func-1"><a href="#lst-dbinom-func-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="dv">12</span>, <span class="dv">24</span>, <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-dbinom-func-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-dbinom-func"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">dbinom</a></span><span class="op">(</span><span class="fl">12</span>, <span class="fl">24</span>, <span class="fl">0.5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
@@ -894,33 +836,28 @@ Listing&nbsp;4.16: <strong>Base R dbinom() function calculates the density of th
 </div>
 </div>
 <p>Again the same result as in <a href="#lst-calc-example" class="quarto-xref">Listing&nbsp;<span>4.2</span></a> and <a href="#lst-my-dbinom-func" class="quarto-xref">Listing&nbsp;<span>4.15</span></a>!</p>
-</section>
-<section id="sec-10-coin-flips" class="level3" data-number="4.7.4">
-<h3 data-number="4.7.4" class="anchored" data-anchor-id="sec-10-coin-flips"><span class="header-section-number">4.7.4</span> Replication of the Binomial Distribution of 10 Coin Flips</h3>
+</section><section id="sec-10-coin-flips" class="level3" data-number="4.7.4"><h3 data-number="4.7.4" class="anchored" data-anchor-id="sec-10-coin-flips">
+<span class="header-section-number">4.7.4</span> Replication of the Binomial Distribution of 10 Coin Flips</h3>
 <p>Here I am going to try to replicate <a href="#fig-10-coin-flips" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>.</p>
 <div class="cell">
 <div id="lst-repl-10-coin-flips" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-repl-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-repl-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.17: <strong>Replicate Figure 4.1: Binomial Distribution of 10 Coin Flips</strong>
-</figcaption>
-<div aria-describedby="lst-repl-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-repl-10-coin-flips"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-repl-10-coin-flips-1"><a href="#lst-repl-10-coin-flips-1" aria-hidden="true" tabindex="-1"></a>k_values <span class="ot">&lt;-</span> <span class="fu">seq.int</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">10</span> , <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="lst-repl-10-coin-flips-2"><a href="#lst-repl-10-coin-flips-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="lst-repl-10-coin-flips-3"><a href="#lst-repl-10-coin-flips-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">x =</span> k_values, </span>
-<span id="lst-repl-10-coin-flips-4"><a href="#lst-repl-10-coin-flips-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> <span class="fu">dbinom</span>(k_values, <span class="dv">10</span>, <span class="fl">0.5</span>)) <span class="sc">|&gt;</span> </span>
-<span id="lst-repl-10-coin-flips-5"><a href="#lst-repl-10-coin-flips-5" aria-hidden="true" tabindex="-1"></a>    ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="lst-repl-10-coin-flips-6"><a href="#lst-repl-10-coin-flips-6" aria-hidden="true" tabindex="-1"></a>    ggplot2<span class="sc">::</span><span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-repl-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-repl-10-coin-flips"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">k_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq.int</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">0</span>, to <span class="op">=</span> <span class="fl">10</span> , by <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">k_values</span>, </span>
+<span>           y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">dbinom</a></span><span class="op">(</span><span class="va">k_values</span>, <span class="fl">10</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
 <div class="cell-output-display">
 <div id="fig-repl-10-coin-flips" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-repl-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-repl-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.4: Replication of Figure 4.1: Binomial Distribution of 10 Coin Flips with {ggplot2}
-</figcaption>
-<div aria-describedby="fig-repl-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption><div aria-describedby="fig-repl-10-coin-flips-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-binomial-distribution_files/figure-html/fig-repl-10-coin-flips-1.png" class="img-fluid figure-img" width="672">
 </div>
 </figure>
@@ -929,9 +866,11 @@ Figure&nbsp;4.4: Replication of Figure 4.1: Binomial Distribution of 10 Coin Fli
 </div>
 <p>Writing <a href="#lst-repl-10-coin-flips" class="quarto-xref">Listing&nbsp;<span>4.17</span></a> I had troubles applying the correct geom. At first I used <code>geom_bar()</code> but this did not work until I learned that I have to add the option “stat = identity” or to use <code>geom_col()</code>. The difference is:</p>
 <ul>
-<li><code>geom_bar()</code> makes the height of the bar proportional to the number of cases in each group. It uses <code>stat_count()</code> by default, e.g.&nbsp;it counts the number of cases at each x position. If there aren’t cases but only the values then one has to add “stat = identity” to declare that ggplot2 should take the data “as-is”.<br>
+<li>
+<code>geom_bar()</code> makes the height of the bar proportional to the number of cases in each group. It uses <code>stat_count()</code> by default, e.g.&nbsp;it counts the number of cases at each x position. If there aren’t cases but only the values then one has to add “stat = identity” to declare that ggplot2 should take the data “as-is”.<br>
 </li>
-<li><code>geom_col()</code> instead takes the heights of the bars to represent values in the data. It uses <code>stat_identity()</code> and leaves the data “as-is” by default.</li>
+<li>
+<code>geom_col()</code> instead takes the heights of the bars to represent values in the data. It uses <code>stat_identity()</code> and leaves the data “as-is” by default.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -947,25 +886,21 @@ Tip
 <p>With {<strong>tidydice</strong>} we replicate Figure 4.1 with just 2 lines using the <code>binom_coin()</code> inside the <code>plot_binom()</code> function. In addition to the graphical distribution it print also the exact values on top of the bars.</p>
 <div class="cell">
 <div id="lst-repl-10-coin-flips-2" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-repl-10-coin-flips-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-repl-10-coin-flips-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.18: <strong>Replicate Figure 4.1: Binomial Distribution of 10 Coin Flips {tidydice}</strong>
-</figcaption>
-<div aria-describedby="lst-repl-10-coin-flips-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-repl-10-coin-flips-2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-repl-10-coin-flips-2-1"><a href="#lst-repl-10-coin-flips-2-1" aria-hidden="true" tabindex="-1"></a>tidydice<span class="sc">::</span><span class="fu">plot_binom</span>(</span>
-<span id="lst-repl-10-coin-flips-2-2"><a href="#lst-repl-10-coin-flips-2-2" aria-hidden="true" tabindex="-1"></a>  tidydice<span class="sc">::</span><span class="fu">binom_coin</span>(<span class="at">times =</span> <span class="dv">10</span>, <span class="at">sides =</span> <span class="dv">2</span>, <span class="at">success =</span> <span class="dv">2</span>),</span>
-<span id="lst-repl-10-coin-flips-2-3"><a href="#lst-repl-10-coin-flips-2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"Binomial distribution of 10 coin flips"</span></span>
-<span id="lst-repl-10-coin-flips-2-4"><a href="#lst-repl-10-coin-flips-2-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-repl-10-coin-flips-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-repl-10-coin-flips-2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">tidydice</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tidydice/man/plot_binom.html">plot_binom</a></span><span class="op">(</span></span>
+<span>  <span class="fu">tidydice</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tidydice/man/binom_coin.html">binom_coin</a></span><span class="op">(</span>times <span class="op">=</span> <span class="fl">10</span>, sides <span class="op">=</span> <span class="fl">2</span>, success <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>,</span>
+<span>  title <span class="op">=</span> <span class="st">"Binomial distribution of 10 coin flips"</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
 <div class="cell-output-display">
 <div id="fig-repl-10-coin-flips-2" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-repl-10-coin-flips-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-repl-10-coin-flips-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.5: Replication of Figure 4.1: Binomial Distribution of 10 Coin Flips with {tidydice}
-</figcaption>
-<div aria-describedby="fig-repl-10-coin-flips-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption><div aria-describedby="fig-repl-10-coin-flips-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-binomial-distribution_files/figure-html/fig-repl-10-coin-flips-2-1.png" class="img-fluid figure-img" width="672">
 </div>
 </figure>
@@ -975,33 +910,28 @@ Figure&nbsp;4.5: Replication of Figure 4.1: Binomial Distribution of 10 Coin Fli
 <p>{<strong>tidydice</strong>} has many other functions related to coin and dice experiments.</p>
 </div>
 </div>
-</section>
-<section id="sec-example-4-4" class="level3" data-number="4.7.5">
-<h3 data-number="4.7.5" class="anchored" data-anchor-id="sec-example-4-4"><span class="header-section-number">4.7.5</span> Replication of the Binomial Distribution of 10 Dice Rolls</h3>
+</section><section id="sec-example-4-4" class="level3" data-number="4.7.5"><h3 data-number="4.7.5" class="anchored" data-anchor-id="sec-example-4-4">
+<span class="header-section-number">4.7.5</span> Replication of the Binomial Distribution of 10 Dice Rolls</h3>
 <p>I will replicate <a href="#fig-10-dice-rolls" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> with {<strong>ggplot2</strong>} and with {<strong>tidydice</strong>}:</p>
 <div class="cell">
 <div id="lst-repl-10-cdice-rolls" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-repl-10-cdice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-repl-10-cdice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.19: <strong>Replicate Figure 4.2: Binomial Distribution of 10 Dice Rolls</strong>
-</figcaption>
-<div aria-describedby="lst-repl-10-cdice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-repl-10-cdice-rolls"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-repl-10-cdice-rolls-1"><a href="#lst-repl-10-cdice-rolls-1" aria-hidden="true" tabindex="-1"></a>k_values <span class="ot">&lt;-</span> <span class="fu">seq.int</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">10</span> , <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="lst-repl-10-cdice-rolls-2"><a href="#lst-repl-10-cdice-rolls-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="lst-repl-10-cdice-rolls-3"><a href="#lst-repl-10-cdice-rolls-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">x =</span> k_values, </span>
-<span id="lst-repl-10-cdice-rolls-4"><a href="#lst-repl-10-cdice-rolls-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> <span class="fu">dbinom</span>(k_values, <span class="dv">10</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>)) <span class="sc">|&gt;</span> </span>
-<span id="lst-repl-10-cdice-rolls-5"><a href="#lst-repl-10-cdice-rolls-5" aria-hidden="true" tabindex="-1"></a>    ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="lst-repl-10-cdice-rolls-6"><a href="#lst-repl-10-cdice-rolls-6" aria-hidden="true" tabindex="-1"></a>    ggplot2<span class="sc">::</span><span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-repl-10-cdice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-repl-10-cdice-rolls"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">k_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq.int</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">0</span>, to <span class="op">=</span> <span class="fl">10</span> , by <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">k_values</span>, </span>
+<span>           y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">dbinom</a></span><span class="op">(</span><span class="va">k_values</span>, <span class="fl">10</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">6</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
 <div class="cell-output-display">
 <div id="fig-repl-10-dice-rolls" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-repl-10-dice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-repl-10-dice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.6: Replication of Figure 4.2: Binomial Distribution of 10 Dice Rolls with {ggplot2}
-</figcaption>
-<div aria-describedby="fig-repl-10-dice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption><div aria-describedby="fig-repl-10-dice-rolls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-binomial-distribution_files/figure-html/fig-repl-10-dice-rolls-1.png" class="img-fluid figure-img" width="672">
 </div>
 </figure>
@@ -1010,25 +940,21 @@ Figure&nbsp;4.6: Replication of Figure 4.2: Binomial Distribution of 10 Dice Rol
 </div>
 <div class="cell">
 <div id="lst-repl-10-dice-rolls-2" class="r cell-code listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-repl-10-dice-rolls-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-repl-10-dice-rolls-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;4.20: <strong>Replicate Figure 4.2: Binomial Distribution of 10 Dice Rolls {tidydice}</strong>
-</figcaption>
-<div aria-describedby="lst-repl-10-dice-rolls-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-repl-10-dice-rolls-2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-repl-10-dice-rolls-2-1"><a href="#lst-repl-10-dice-rolls-2-1" aria-hidden="true" tabindex="-1"></a>tidydice<span class="sc">::</span><span class="fu">plot_binom</span>(</span>
-<span id="lst-repl-10-dice-rolls-2-2"><a href="#lst-repl-10-dice-rolls-2-2" aria-hidden="true" tabindex="-1"></a>  tidydice<span class="sc">::</span><span class="fu">binom_dice</span>(<span class="at">times =</span> <span class="dv">10</span>, <span class="at">sides =</span> <span class="dv">6</span>, <span class="at">success =</span> <span class="dv">6</span>),</span>
-<span id="lst-repl-10-dice-rolls-2-3"><a href="#lst-repl-10-dice-rolls-2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"Binomial distribution of 10 dice rolls"</span></span>
-<span id="lst-repl-10-dice-rolls-2-4"><a href="#lst-repl-10-dice-rolls-2-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</figcaption><div aria-describedby="lst-repl-10-dice-rolls-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-repl-10-dice-rolls-2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">tidydice</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tidydice/man/plot_binom.html">plot_binom</a></span><span class="op">(</span></span>
+<span>  <span class="fu">tidydice</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tidydice/man/binom_dice.html">binom_dice</a></span><span class="op">(</span>times <span class="op">=</span> <span class="fl">10</span>, sides <span class="op">=</span> <span class="fl">6</span>, success <span class="op">=</span> <span class="fl">6</span><span class="op">)</span>,</span>
+<span>  title <span class="op">=</span> <span class="st">"Binomial distribution of 10 dice rolls"</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
 <div class="cell-output-display">
 <div id="fig-repl-10-dice-rolls-2" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-repl-10-dice-rolls-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-repl-10-dice-rolls-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.7: Replication of Figure 4.2: Binomial Distribution of 10 Dice Rolls with {tidydice}
-</figcaption>
-<div aria-describedby="fig-repl-10-dice-rolls-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption><div aria-describedby="fig-repl-10-dice-rolls-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-binomial-distribution_files/figure-html/fig-repl-10-dice-rolls-2-1.png" class="img-fluid figure-img" width="672">
 </div>
 </figure>
@@ -1039,11 +965,7 @@ Figure&nbsp;4.7: Replication of Figure 4.2: Binomial Distribution of 10 Dice Rol
 
 <!-- -->
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1502,16 +1424,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./03-logic-uncertainty.html" class="pagination-link" aria-label="Logic of Uncertainty">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Logic of Uncertainty</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05-beta-distribution.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05-beta-distribution.html" class="pagination-link" aria-label="The Beta Distribution">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Beta Distribution</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
@@ -2159,7 +2079,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-
 
 
 
